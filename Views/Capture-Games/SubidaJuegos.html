@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Submission Form</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+.upload-btn {
+  background-color: #4CAF50; /* Verde */
+}
+
+.preview-btn {
+  background-color: #007BFF; /* Azul */
+}
+
+.save-draft-btn {
+  background-color: #FFC107; /* Amarillo */
+}
+
+.clear-form-btn {
+  background-color: #DC3545; /* Rojo */
+}
+
+/* Estilos comunes para botones secundarios */
+.secondary-button {
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Asegurarse que el input de submit y los botones secundarios tengan estilos consistentes */
+input[type="submit"].button, .secondary-button {
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+.background {
+  background-image: url('/ima/imagenBack.png');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.8); /* Semi-transparent black */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .form-container {
+  max-width: 800px; /* Increased width */
+  width: 90%; /* To make it responsive */
+  margin: auto;
+  padding: 40px; /* Increased padding */
+  background-color: rgba(0,0,0,0.8); /* Semi-transparent black */
+  color: white;
+  border-radius: 15px; /* Larger border radius */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* More prominent shadow */
+}
+
+.button {
+  background-color: #007BFF; /* Primary button color */
+  padding: 20px 40px; /* Larger buttons */
+  font-size: 18px; /* Larger font size */
+  margin: 10px 0; /* Spacing around buttons */
+}
+
+/* Additional styles for new buttons */
+.secondary-button {
+  background-color: #6C757D; /* Secondary button color */
+  padding: 15px 30px; /* Smaller than the primary button */
+  font-size: 16px; /* Smaller font size */
+}
+
+/* Ensure input fields are styled consistently */
+input[type="text"], input[type="file"] {
+  padding: 15px; /* Increased padding for input fields */
+  font-size: 16px; /* Larger font size */
+}
+
+</style>
+</head>
+<body>
+
+<div class="background">
+  <div class="form-container">
+    <h1>Game Submission</h1>
+    <form action="/submit-game" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" required>
+      </div>
+      <form action="/submit-game" method="post" enctype="multipart/form-data">
+        <!-- ...otros elementos del formulario... -->
+        <div class="form-group">
+          <input type="submit" value="Upload Game" class="button upload-btn">
+          <button type="button" class="secondary-button preview-btn" onclick="previewGame()">Vista Previa</button>
+          <button type="button" class="secondary-button save-draft-btn" onclick="saveDraft()">Guardar Borrador</button>
+          <button type="button" class="secondary-button clear-form-btn" onclick="resetForm()">Limpiar Formulario</button>
+        </div>
+      </form>
+      
+      
+      <script>
+      function previewGame() {
+        // Código para mostrar una vista previa del juego
+      }
+      
+      function saveDraft() {
+        // Código para guardar los datos del formulario como borrador
+      }
+      
+      function resetForm() {
+        // Código para restablecer el formulario
+        document.querySelector('form').reset();
+      }
+      </script>
+      
+    </form>    
+  </div>
+</div>
+
+</body>
+</html>

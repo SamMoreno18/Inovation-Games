@@ -1,0 +1,195 @@
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.carousel-inner {
+    display: flex;
+    width: calc((100% * 4) + 80px); 
+    animation: scroll 60s linear infinite;
+}
+.carousel-item {
+    flex: 0 0 auto;
+    width: calc(100% / 4); 
+    cursor: pointer;
+    margin: 0 10px; 
+}
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+}
+
+.si{
+    background-color: #1F2544;
+}
+
+.sii{
+    background-color: #1F2544;
+}
+
+body {
+    font-family: 'TuFuente', sans-serif; 
+    background-image: url(DALL·E\ 2024-02-07\ 15.53.00\ -\ A\ webpage\ layout\ for\ a\ fantasy\ video\ game\ inspired\ by\ \'Hollow\ Knight\'.\ The\ central\ banner\ shows\ a\ silhouetted\ character\ with\ a\ cloak\ and\ horned\ mask\,\ .webp);
+    background-size: cover;
+    position: relative;
+}
+
+html, body {
+    min-height: 100vh; /* Asegura que el contenido más corto no limite el fondo */
+    margin: 0;
+    padding: 0;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+  
+header {
+    width: 50%;
+    height: 50px;
+    border-radius: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    margin: auto; 
+    background-color: #17172d; 
+}
+
+.nav-icon {
+    height: 20px; 
+    margin: 0 5px; 
+    color: #ffffff;    
+    filter: brightness(0) invert(1);
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+}
+  
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+  
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.boton{
+    height: 50px;
+    border-radius: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    margin: auto; 
+    background-color: #1F2544; 
+}
+
+header nav ul li a {
+    letter-spacing: 1.5px; 
+    color: white; 
+    text-decoration: none;
+}
+
+
+.hero-section {
+  background-image: url('/img/pal.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.header-background {
+    background-color: #1F2544; 
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 2px solid #FFFFFF; 
+    background-color: #27263F;
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin: 0 10px;
+
+    color: rgb(255, 255, 255);
+} 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sidebar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 100vh;
+    width: 0; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    transition: 0.5s; 
+    z-index: 1000;
+    background-color: #1F2544;
+     
+}
+
+.sidebar-open {
+    width: 250px; 
+}
+
+
+  .sidebar button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+  }
+
+  .sidebar hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    margin: 10px 0; 
+  }
+.jjk{
+    letter-spacing: 1.5px; 
+    color: white; 
+    text-decoration: none;
+}
+
+.palabra{
+    padding: 5px;
+    border: 2px solid #FFFFFF; 
+    background-color: #27263F;
+    border-radius: 5px;
+    border-color: #ffffff;
+    margin: 0 10px;
+
+    color: rgb(255, 255, 255);
+}
+  

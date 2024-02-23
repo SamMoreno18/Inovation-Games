@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'TuFuente', sans-serif; 
+    background-image: url(../img/bg-rem.avif);
+    background-size: cover;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    position: relative;
+    background-position: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+html, body {
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.5); 
+    z-index: -1;
+    margin-top: 10px;
+}
+
+  
+header {
+    width: 50%;
+    height: 50px;
+    border-radius: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    margin: auto; 
+    background-color: #640101; 
+}
+
+.nav-icon {
+    height: 20px; 
+    margin: 0 5px; 
+    color: #ffffff;    
+    filter: brightness(0) invert(1);
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+}
+  
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+  
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+
+header nav ul li a {
+    letter-spacing: 1.5px; 
+    color: white; 
+    text-decoration: none;
+}
+
+
+  
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 2px solid #FFFFFF; 
+    background-color: #640101;
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin: 0 10px;
+
+    color: rgb(255, 255, 255);
+}
+ 
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 50px;
+    margin:  auto;
+    max-width: 1200px; 
+    margin-left: 20px;
+}
+
+.tab:hover {
+    background-color: #640101; 
+    border-color: #666;
+  }
+
+.image-cont {
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 8px; 
+}
+
+.Hollow {
+    width: 100%;
+    max-width: 130px;
+    margin-bottom: 10px; 
+}
+
+.Hollow img {
+    max-width: 100%; 
+    height: 60px; 
+}
+
+
+.sidebar {
+    flex: 5; 
+    max-width: 350px; 
+    margin-left: 20px;
+
+}
+
+.logo-icon {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.purchase-options button {
+    width: 100%; 
+    margin-bottom: 15px;
+    color: #ffffff;
+    background-color: transparent;  
+    height: 40px;
+    border-color: #FFFFFF;
+ 
+}
+
+.compra button{
+    width: 100%; 
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #640101   ;
+    border-color: transparent;
+    
+}
+
+.price {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+
+}
+
+.discount, .sale-price {
+    color: #FFFFFF;
+}
+
+.original-price{
+    color: #AAAAAE;
+}
+
+mark{
+    color: #ffffff;
+    background-color: #520808;
+}
+
+.publisher strong {
+    display: block;
+    color: white;
+    height: 40px;
+}
+
+.publisher span {
+    display: block;
+    color: white;
+    height: 40px;
+}
+
+.rating span{
+    display: block;
+    color: white;
+    width: 100%;
+
+}
+
+.stars {
+    color: #FFFFFF;
+}
+
+.game-media {
+    flex-grow: 1; 
+}
+
+a {
+    color: #FFF;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.content-container {
+    display: flex;
+}
+
+.video-and-requirements {
+    flex-grow: 1; 
+}
+
+.sidebar {
+    margin-top: 85px;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin-left: 980px;
+    left: 0px;
+}
+
+.system-requirements {
+    background-color: transparent; 
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #444;
+  }
+  
+  .tab {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: #1F2544; 
+    border-color: #666;
+  }
+  
+  .requirements {
+    display: none; 
+  }
+  
+  .requirements.active {
+    display: block; 
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 20px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: #9e8888;
+  }
+  
+  .details {
+    margin-left: 5px;
+  }
+  
+  
