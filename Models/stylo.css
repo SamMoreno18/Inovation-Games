@@ -4,6 +4,74 @@
     overflow: hidden;
     margin-top: 20px;
 }
+.transparente{
+    color: transparent;
+}
+.img-fit-contain {
+    object-fit: contain; 
+    max-width: 100%;
+    height: auto; 
+}
+ 
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  .tre{
+    font-size: 23px;
+    text-align: center;
+  }
+  
+
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 93%;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #17172d;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1F2544;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1.7%;
+    right: 0;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #17172d;
+  }
+  
+  .show {display: block;}
+
+
+
+
+
 .carousel-inner {
     display: flex;
     width: calc((100% * 4) + 80px); 
