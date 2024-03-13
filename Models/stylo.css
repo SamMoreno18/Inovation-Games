@@ -1,22 +1,18 @@
-.title-cont {
-    color: aqua;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 25px;
-    font-family: monospace;
-}
-
-.mb-6 {
-    color: #27263F;
-    font-size: 25px;
-    text-align: center;
-    font-family: monospace;
-}
-
 .carousel {
     display: flex;
     overflow: hidden;
     margin-top: 20px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.accion {
+    color: #b1afaf;
+
 }
 
 .transparente {
@@ -48,7 +44,7 @@
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: monospace;
+    font-family: inherit;
     margin: 0;
     position: absolute;
     top: 0%;
@@ -119,7 +115,7 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'TuFuente', sans-serif;
     background-image: url(DALL·E\ 2024-02-07\ 15.53.00\ -\ A\ webpage\ layout\ for\ a\ fantasy\ video\ game\ inspired\ by\ \'Hollow\ Knight\'.\ The\ central\ banner\ shows\ a\ silhouetted\ character\ with\ a\ cloak\ and\ horned\ mask\,\ .webp);
     background-size: cover;
     position: relative;
@@ -254,10 +250,9 @@ header nav ul li a {
     display: block;
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     padding: 10px 0;
-    padding-left: 10px;
     margin-bottom: 10px;
     transition: background-color 0.3s;
 }

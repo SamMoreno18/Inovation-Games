@@ -44,6 +44,22 @@ window.onclick = function(e) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const generoBtn = document.getElementById('genero-btn');
+  const generoOptions = document.getElementById('genero-options');
+
+  generoBtn.addEventListener('click', function() {
+    generoOptions.classList.toggle('hidden');
+  });
+});
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var accionButton = document.getElementById('accion');
+            accionButton.addEventListener('click', function() {
+            window.location.href = '/paginota/filtro_accion.html';
+        });
+    });
 
 
 
@@ -95,3 +111,33 @@ function updateDescription() {
   userDescription.classList.remove('hidden');
   document.getElementById('editDescriptionBtn').classList.remove('hidden');
 }
+
+
+
+
+
+
+const genreButton = document.getElementById('genre-button');
+    const genreDropdown = document.getElementById('genre-dropdown');
+    // Nuevo código para manejar el menú desplegable de "Tipo"
+    const typeButton = document.querySelector('.dropdown-container > button'); // Ajusta si tienes varios botones similares
+    const typeDropdown = document.getElementById('type-dropdown');
+
+    genreButton.addEventListener('click', function() {
+      genreDropdown.style.display = genreDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    typeButton.addEventListener('click', function() {
+      typeDropdown.style.display = typeDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.onclick = function(event) {
+      if (!event.target.matches('#genre-button') && !event.target.matches('.dropdown-container > button')) {
+        if (genreDropdown.style.display === 'block') {
+          genreDropdown.style.display = 'none';
+        }
+        if (typeDropdown.style.display === 'block') {
+          typeDropdown.style.display = 'none';
+        }
+      }
+    }

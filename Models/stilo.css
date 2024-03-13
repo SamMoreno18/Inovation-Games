@@ -1,174 +1,172 @@
-
 .system-requirements {
-    background-color: transparent; 
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tabs {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-    border-bottom: 1px solid #444;
-  }
-  
-  .tab {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
-  
-  .tab:hover {
-    background-color: #1F2544; 
-    border-color: #666;
-    color: aliceblue;
-  }
-  
-  .tab1 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
-  .tab2 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .tab3 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #444;
+}
 
-  .tab4 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
+.tab {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab5 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
+.tab:hover {
+  background-color: #1F2544;
+  border-color: #666;
+  color: aliceblue;
+}
 
-  .tab6 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
+.tab1 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab7 {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-    color: aliceblue;
-  }
-  
-  .tab1:hover {
-    background-color: #520808; 
-    border-color: #666;
-  }
+.tab2 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab2:hover {
-    background-color: #bebe2f; 
-    border-color: #666;
-  }
+.tab3 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab3:hover {
-    background-color: #241596; 
-    border-color: #666;
-  }
+.tab4 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab4:hover {
-    background-color: #525252; 
-    border-color: #666;
-  }
+.tab5 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab5:hover {
-    background-color: #11491e; 
-    border-color: #666;
-  }
+.tab6 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .tab6:hover {
-    background-color: #9f1b1b; 
-    border-color: #666;
-  }
-  
-  .tab7:hover {
-    background-color: #11491e; 
-    border-color: #666;
-  }
-  
-  
+.tab7 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: aliceblue;
+}
 
-  .requirements {
-    display: none; 
-  }
-  
-  .requirements.active {
-    display: block; 
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    column-gap: 20px;
-  }
-  
-  .section-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .title {
-    font-weight: bold;
-  }
-  
-  .details {
-    margin-left: 5px;
-  }
-  
-  
+.tab1:hover {
+  background-color: #520808;
+  border-color: #666;
+}
+
+.tab2:hover {
+  background-color: #bebe2f;
+  border-color: #666;
+}
+
+.tab3:hover {
+  background-color: #241596;
+  border-color: #666;
+}
+
+.tab4:hover {
+  background-color: #525252;
+  border-color: #666;
+}
+
+.tab5:hover {
+  background-color: #11491e;
+  border-color: #666;
+}
+
+.tab6:hover {
+  background-color: #9f1b1b;
+  border-color: #666;
+}
+
+.tab7:hover {
+  background-color: #11491e;
+  border-color: #666;
+}
+
+
+
+.requirements {
+  display: none;
+}
+
+.requirements.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.details {
+  margin-left: 5px;
+}

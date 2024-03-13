@@ -1,0 +1,39 @@
+#type-dropdown,
+#genre-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #1F2544;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0.25rem;
+}
+
+#type-dropdown a,
+#genre-dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#type-dropdown a:hover,
+#genre-dropdown a:hover {
+  background-color: #17172d;
+}
+
+.game-section-background {
+  background-color: #01012a;
+}
+
+
+.grid img {
+  width: 400%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.klk {
+  background-color: #1F2544;
+  color: aliceblue;
+}
