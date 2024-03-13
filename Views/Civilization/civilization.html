@@ -1,134 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Civilization</title>
-<link rel="stylesheet" href="civilization.css">
-<link rel="stylesheet" href="../Landing/stilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civilization</title>
+  <link rel="stylesheet" href="/civilization.css">
+  <link rel="stylesheet" href="/paginota/stilo.css">
 </head>
+
 <body>
-    <nav>_</nav>
+  <nav>_</nav>
   <header>
     <nav>
-        <ul>
-            <li><img src="../img/pc.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
-            <li><img src="../img/logotipo-de-playstation.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">PLAYSTATION</a></li>
-            <li><img src="../img/xbox.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
-            <li><img src="../img/tecnologia.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
-          </ul>
+      <ul>
+        <li><img src="/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
+        <li><img src="/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
+            href="#">PLAYSTATION</a></li>
+        <li><img src="/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
+        <li><img src="/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
+      </ul>
     </nav>
     <div class="search-bar">
       <input type="text" placeholder="Search...">
     </div>
-    <img src="../img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+    <img src="/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
   </header>
 
   <main>
     <div class="fixed-background"></div>
-    <div class="content-container"> 
-        <div class="video-and-requirements">
-            <div class="image-cont" id="image-container">
-        <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/5KdE0p2joJw?si=plUhuz2heozR2uzr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <img id="image4" src="../img/Captura de pantalla 2024-02-18 181602.png" alt="Hollow Knight" class="Hollow" onclick="showVideo();">
-        <img id="image1" src="../img/civi-1.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-1.jpg');">
-        <img id="image1" src="../img/civi-2.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-2.jpg');">
-        <img id="image3" src="../img/civi-3.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-3.jpg');">
+    <div class="content-container">
+      <div class="video-and-requirements">
+        <div class="image-cont" id="image-container">
+          <iframe id="videoFrame" width="560" height="315"
+            src="https://www.youtube.com/embed/5KdE0p2joJw?si=plUhuz2heozR2uzr" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <img id="image4" src="/img/Captura de pantalla 2024-02-18 181602.png" alt="Hollow Knight" class="Hollow"
+            onclick="showVideo();">
+          <img id="image1" src="/img/civi-1.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('/img/civi-1.jpg');">
+          <img id="image1" src="/img/civi-2.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('/img/civi-2.jpg');">
+          <img id="image3" src="/img/civi-3.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('/img/civi-3.jpg');">
 
-        <div class="sidebar">
-            <img src="../img/logo-civi-removebg-preview.png" alt="logo Icon" class="logo-icon">
+          <div class="sidebar">
+            <img src="/img/logo-civi-removebg-preview.png" alt="logo Icon" class="logo-icon">
             <div class="purchase-options">
-                <div class="compra">
-                    <button>COMPRALO YA</button>
-                </div>
-                <button>AGREGAR AL CARRITO</button>
-                <button>A LISTA DE DESEOS</button>
+              <div class="compra">
+                <button>COMPRALO YA</button>
+              </div>
+              <button>AGREGAR AL CARRITO</button>
+              <button>A LISTA DE DESEOS</button>
             </div>
             <div class="price">
-                <span class="sale-price">$1299</span>
+              <span class="sale-price">$1299</span>
             </div>
             <div class="publisher">
-                <strong>Rockstar Games</strong>
-                <span>05/11/19</span>
+              <strong>Rockstar Games</strong>
+              <span>05/11/19</span>
             </div>
-            <div class="rating">
-                <span>Calificaciones de jugadores</span>
-                <div class="stars">
-                    4.9
-                    <span>★★★★★</span> 
-                </div>
+            <div class="rating2">
+              <span>Calificaciones de jugadores</span>
+              <div class="stars2" id="rating-stars2">
+                <span class="star2" data-value="1">★</span>
+                <span class="star2" data-value="2">★</span>
+                <span class="star2" data-value="3">★</span>
+                <span class="star2" data-value="4">★</span>
+                <span class="star2" data-value="5">★</span>
+              </div>
             </div>
-        </div>
-        <div></div>
+          </div>
+          <div>_</div>
 
-        <div class="system-requirements bg-gray-800 text-white p-6 max-w-2xl mx-auto rounded-lg">
+          <div class="system-requirements bg-gray-800 text-white p-6 max-w-2xl mx-auto rounded-lg">
             <ul class="tabs3 flex justify-between mb-4">
-                <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('windows')">Windows</button>
-                <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('macos')">macOS</button>
-                <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('linux')">SteamOS + Linux</button>
+              <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('windows')">Windows</button>
+              <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('macos')">macOS</button>
+              <button class="tab3 px-3 py-1 rounded cursor-pointer" onclick="changeTab('linux')">SteamOS +
+                Linux</button>
             </ul>
-      <div id="windows" class="requirements">
-        <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
-        <div>.</div>
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <h3 class="section-title">MÍNIMO:</h3>
-                <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de 64 bits</span></p>
-                <p><span class="title">SO:</span> <span class="details"> Windows 7x64 / Windows 8.1x64 / Windows 10x64</span></p>
-                <p><span class="title">Procesador:</span> <span class="details">Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater</span></p>
-                <p><span class="title">Memoria:</span> <span class="details">4 GB de RAM</span></p>
-                <p><span class="title">Gráficos:</span> <span class="details"> 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530</span></p>
-                <p><span class="title">DirectX:</span> <span class="details">Versión 11</span></p>
-                <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span></p>
-              </div>
-              <div>
-                <h3 class="section-title">RECOMENDADO:</h3>
-                <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de 64 bits</span></p>
-                <p><span class="title">SO:</span> <span class="details"> Windows 7x64 / Windows 8.1x64 / Windows 10x64</span></p>
-                <p><span class="title">Procesador:</span> <span class="details"> Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater</span></p>
-                <p><span class="title">Memoria:</span> <span class="details">8 GB de RAM</span></p>
-                <p><span class="title">Gráficos:</span> <span class="details"> 2GB & AMD 7970 or nVidia 770 or greater</span></p>
-                <p><span class="title">DirectX:</span> <span class="details">Versión 11</span></p>
-                <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span></p>
-              </div>
-            </div>
-        </div>
-        <div id="macos" class="requirements hidden">
-          <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
-          <div class="grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="section-title">MÍNIMO:</h3>
-                <p><span class="title">SO:</span> <span class="details"> 10.14.6 (Mojave)</span></p>
-                <p><span class="title">Procesador:</span> <span class="details">Intel Core i5 2.7Ghz</span></p>
-                <p><span class="title">Memoria:</span> <span class="details">6 GB de RAM</span></p>
-                <p><span class="title">Gráficos:</span> <span class="details">1 GB GPU Minimum - GeForce 775M | Radeon HD 6970 | Intel Iris Pro</span></p>
-                <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span></p>
-                <p><span class="title">Notas adicionales:</span> <span class="details">It is possible for Mac and PC to become out of sync during updates or patches. Within this time period, Mac users will only be able to play other Mac users.</span></p>
+            <div id="windows" class="requirements">
+              <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
+              <div>.</div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 class="section-title">MÍNIMO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details"> Windows 7x64 / Windows 8.1x64 / Windows
+                      10x64</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details">Intel Core i3 2.5 Ghz or AMD Phenom II
+                      2.6 Ghz or greater</span></p>
+                  <p><span class="title">Memoria:</span> <span class="details">4 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details"> 1 GB & AMD 5570 or nVidia 450 or Intel
+                      Integrated Graphics 530</span></p>
+                  <p><span class="title">DirectX:</span> <span class="details">Versión 11</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span>
+                  </p>
+                </div>
+                <div>
+                  <h3 class="section-title">RECOMENDADO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details"> Windows 7x64 / Windows 8.1x64 / Windows
+                      10x64</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details"> Fourth Generation Intel Core i5 2.5
+                      Ghz or AMD FX8350 4.0 Ghz or greater</span></p>
+                  <p><span class="title">Memoria:</span> <span class="details">8 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details"> 2GB & AMD 7970 or nVidia 770 or
+                      greater</span></p>
+                  <p><span class="title">DirectX:</span> <span class="details">Versión 11</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span>
+                  </p>
+                </div>
               </div>
             </div>
-        </div>
-        <div id="linux" class="requirements hidden">
-          <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
-          <div class="grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="section-title">MÍNIMO:</h3>
-                <p><span class="title">SO:</span> <span class="details">Ubuntu 16.04 (64bit)</span></p>
-                <p><span class="title">Procesador:</span> <span class="details"> Intel Core i3 530 or AMD A8-3870</span></p>
-                <p><span class="title">Memoria:</span> <span class="details">6 GB de RAM</span></p>
-                <p><span class="title">Gráficos:</span> <span class="details"> 1 GB VRAM Minimum - NVIDIA GeForce 650</span></p>
-                <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span></p>
-                <p><span class="title">Notas adicionales:</span> <span class="details">ATI and INTEL chipsets are NOT supported to run Civilization VI LINUX.</span></p>
+            <div id="macos" class="requirements hidden">
+              <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 class="section-title">MÍNIMO:</h3>
+                  <p><span class="title">SO:</span> <span class="details"> 10.14.6 (Mojave)</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details">Intel Core i5 2.7Ghz</span></p>
+                  <p><span class="title">Memoria:</span> <span class="details">6 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details">1 GB GPU Minimum - GeForce 775M | Radeon
+                      HD 6970 | Intel Iris Pro</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span>
+                  </p>
+                  <p><span class="title">Notas adicionales:</span> <span class="details">It is possible for Mac and PC
+                      to become out of sync during updates or patches. Within this time period, Mac users will only be
+                      able to play other Mac users.</span></p>
+                </div>
               </div>
-      </div>
-      </div>
-</main>
+            </div>
+            <div id="linux" class="requirements hidden">
+              <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 class="section-title">MÍNIMO:</h3>
+                  <p><span class="title">SO:</span> <span class="details">Ubuntu 16.04 (64bit)</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details"> Intel Core i3 530 or AMD
+                      A8-3870</span></p>
+                  <p><span class="title">Memoria:</span> <span class="details">6 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details"> 1 GB VRAM Minimum - NVIDIA GeForce
+                      650</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">17 GB de espacio disponible</span>
+                  </p>
+                  <p><span class="title">Notas adicionales:</span> <span class="details">ATI and INTEL chipsets are NOT
+                      supported to run Civilization VI LINUX.</span></p>
+                </div>
+              </div>
+            </div>
+  </main>
 
-<script src="../HollowKnight/script.js"></script>
-<script src="../Landing/sistema.js"></script>
+  <script src="script.js"></script>
+  <script src="/paginota/sistema.js"></script>
 </body>
 
 </html>
-
-
-
-

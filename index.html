@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Store</title>
-  <link rel="stylesheet" href="/Models/stylo.css">
+  <link rel="stylesheet" href="stylo.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/Models/scriptt.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -17,16 +16,15 @@
 <body class="bg-gray-900 text-white font-'Open Sans'">
   <div class="header-background">
     <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="/Views/img/filtrar-removebg-preview.png" alt="left-icon"
+      <button class="text-xl" id="filtros"><img src="/img/filtrar-removebg-preview.png" alt="left-icon"
           class="nav-icon left-icon"></button>
       <div class="navbar">
         <div class="dropdown">
           <button class="dropbtn" onclick="myFunction()">Cuenta
           </button>
           <div class="dropdown-content" id="myDropdown">
-            <a href="/login.html">Inicio de Sesion</a>
-            <a href="/Views/cuenta/cuenta.html">Mi perfil</a>
-            <a href="#">Configuracion</a>
+            <a href="/Login/index.html">Iniciar secion</a>
+            <a href="cuenta.html">Ver mi perfil</a>
             <a href="#">Conviertete en desarollador</a>
           </div>
         </div>
@@ -34,18 +32,17 @@
       <header>
         <nav>
           <ul>
-            <li><img src="/Views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
-            <li><img src="/Views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
+            <li><img src="/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
+            <li><img src="/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
                 href="#">PLAYSTATION</a></li>
-            <li><img src="/Views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
-            <li><img src="/Views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a>
-            </li>
+            <li><img src="/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
+            <li><img src="/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
           </ul>
         </nav>
         <div class="search-bar">
           <input type="text" placeholder="Search...">
         </div>
-        <img src="/Views/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+        <img src="/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
       </header>
     </div>
   </div>
@@ -54,91 +51,89 @@
   <div class="sidebar">
 
     <button class="border-t border-gray-700">
-      <div class="jjk"><img src="/Views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon">
-      </div>
+      <div class="jjk"><img src="/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
     </button>
 
-    <div class="space-y-2">
-      <input class="palabra" placeholder="Palabras clave">
 
-    </div>
     <div class="space-y-4 mt-4">
-      <button class="border-t border-gray-700">
+      <button id="genero-btn" class="border-t border-gray-700">
         <div class="font-medium">Género</div>
       </button>
-      <hr> <!-- Línea horizontal -->
+      <div id="genero-options" class="hidden">
+        <div><button class="accion" id="accion" name="accion">-Acción</button></div>
+        <div><button class="accion" id="aventura" name="aventura">-Aventura</button></div>
+        <div><button class="accion" id="estrategia" name="estrategia">-Estrategia</button></div>
+      </div>
+
+
+      <hr>
       <button class="border-t border-gray-700">
         <div class="font-medium">Precio</div>
       </button>
-      <hr> <!-- Línea horizontal -->
+      <hr>
       <button class="border-t border-gray-700">
-        <div class="font-medium">Ofertas</div>
-      </button>
-      <hr> <!-- Línea horizontal -->
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Plataforma</div>
-      </button>
+        <a href="/paginota/ofertas.html">Ofertas</a>
     </div>
+    </button>
   </div>
-  <div class="content">
   </div>
+
 
   </nav>
   <!-- Hero Section -->
   <section class="hero-section text-center p-20 bg-blue-600 bg-opacity-25"
-    style="background-image: url('/Views/img/pal.jpg');">
+    style="background-image: url('/img/pal.jpg');">
     <h1 class="text-5xl font-bold mb-6">The Adventure of The Game Begins Here!</h1>
     <p class="mb-6">Navigate to new gaming universes. At Gaming Galaxia, every moment is an adventure. Dive into the
       endless world of video games now.</p>
-    <button class="boton">Discover</button>
   </section>
 
   <section class="si">
-    <p class="title-cont">Trending</p>
+    <p class="text-2xl mb-6">Trending</p>
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
-          <a href="Views/Remn/remnant.html">
-            <img src="/Views/img/cap1.png" alt="Imagen 1">
+          <a href="/remnant.html">
+            <img src="/img/cap1.png" alt="Imagen 1">
         </div>
         <div class="carousel-item">
-          <a href="Views/BaldursGate/baldurgate.html">
-            <img src="/Views/img/cap2.png" alt="Imagen 2">
+          <a href="/baldurgate.html">
+            <img src="/img/cap2.png" alt="Imagen 2">
         </div>
         <div class="carousel-item">
-          <a href="Views/GTA/GTA.html">
-            <img src="/Views/img/cap3.png" alt="Imagen 3">
+          <a href="/GTA.html">
+            <img src="/img/cap3.png" alt="Imagen 3">
         </div>
         <div class="carousel-item">
-          <a href="Views/Rust/rust.html">
-            <img src="/Views/img/cap4.png" alt="Imagen 4">
+          <a href="/rust.html">
+            <img src="/img/cap4.png" alt="Imagen 4">
         </div>
       </div>
     </div>
   </section>
   <!-- Trending Section -->
   <section class="sii">
-    <h2 class="title-cont">Trending</h2>
+    <h2 class="text-2xl mb-6">Trending</h2>
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
-          <a href="/Views/Cyberpunk/ciberp.html">
-            <img src="/Views/img/cap5.png" alt="Imagen 1">
+          <a href="/ciberp.html">
+            <img src="/img/cap5.png" alt="Imagen 1">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/HollowKnight/HK.html">
-            <img src="/Views/img/cap9.png" alt="Imagen 2">
+          <a href="/index.html">
+            <img src="/img/cap9.png" alt="Imagen 2">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/Red Dead Redemption/rdr.html">
-            <img src="/Views/img/cap7.png" alt="Imagen 3">
+          <a href="/rdr.html">
+            <img src="/img/cap7.png" alt="Imagen 3">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/Civilization/civilization.html">
-            <img src="/Views/img/cap8.png" alt="Imagen 4">
+          <a href="/civilization.html">
+            <img src="/img/cap8.png" alt="Imagen 4">
           </a>
         </div>
       </div>
@@ -161,7 +156,7 @@
       <p>Our users love what we offer!</p>
     </div>
   </footer>
-  <script src="/Views/HollowKnight/script.js"></script>
+  <script src="scriptt.js"></script>
 </body>
 
 </html>
