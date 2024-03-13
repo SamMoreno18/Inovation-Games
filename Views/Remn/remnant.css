@@ -6,7 +6,7 @@
   
 body {
     font-family: 'TuFuente', sans-serif; 
-    background-image: url(../img/bg-rem.avif);
+    background-image: url(img/bg-rem.avif);
     background-size: cover;
     background-attachment: fixed; /* Fija la imagen de fondo */
     position: relative;
@@ -16,6 +16,47 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+}
+
+
+.rating7 span{
+    display: block;
+    color: white;
+    width: 100%;
+
+}
+.stars7 {
+    display: flex; 
+    justify-content: start;
+    gap: 5px; 
+}
+
+.star7 {
+    font-size: 24px; 
+    color: gray; 
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.star7.active {
+    color: gold; 
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.star7.pop {
+    animation: pop 0.4s ease;
 }
 
 
@@ -290,5 +331,4 @@ button {
   .details {
     margin-left: 5px;
   }
-  
   

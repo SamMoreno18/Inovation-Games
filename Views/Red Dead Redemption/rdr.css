@@ -6,7 +6,7 @@
   
 body {
     font-family: 'TuFuente', sans-serif; 
-    background-image: url(../img/red_dead_redemption_2_2017.jpg);
+    background-image: url(img/red_dead_redemption_2_2017.jpg);
     background-size: cover;
     background-attachment: fixed; /* Fija la imagen de fondo */
     position: relative;
@@ -20,7 +20,7 @@ body {
 
 body {
     font-family: 'TuFuente', sans-serif; 
-    background-image: url(../img/red_dead_redemption_2_2017.jpg);
+    background-image: url(img/red_dead_redemption_2_2017.jpg);
     background-size: cover;
     background-attachment: fixed; /* Fija la imagen de fondo */
     position: relative;
@@ -206,15 +206,44 @@ mark{
     height: 40px;
 }
 
-.rating span{
+.rating1 span{
     display: block;
     color: white;
     width: 100%;
 
 }
+.stars1 {
+    display: flex; 
+    justify-content: start;
+    gap: 5px; 
+}
 
-.stars {
-    color: #FFFFFF;
+.star1 {
+    font-size: 24px; 
+    color: gray; 
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.star1.active {
+    color: gold; 
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.star1.pop {
+    animation: pop 0.4s ease;
 }
 
 .game-media {

@@ -6,7 +6,7 @@
   
 body {
     font-family: 'TuFuente', sans-serif; 
-    background-image: url(../img/bg-rust.webp);
+    background-image: url(img/bg-rust.webp);
     background-size: cover;
     background-attachment: fixed; /* Fija la imagen de fondo */
     position: relative;
@@ -193,15 +193,45 @@ mark{
     height: 40px;
 }
 
-.rating span{
+.rating4 span{
     display: block;
     color: white;
     width: 100%;
 
 }
 
-.stars {
-    color: #FFFFFF;
+.stars4 {
+    display: flex; 
+    justify-content: start;
+    gap: 5px; 
+}
+
+.star4 {
+    font-size: 24px; 
+    color: gray; 
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.star4.active {
+    color: gold; 
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.star4.pop {
+    animation: pop 0.4s ease;
 }
 
 .game-media {
