@@ -1,116 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de deseos</title>
-<link rel="stylesheet" href="stylo.css">
-<link rel="stylesheet" href="ListStyle.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
- 
-</head>
-<body class="bg-gray-900 text-white font-'Open Sans'">
-  <div class="header-background">
-    <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="/img/filtrar-removebg-preview.png" alt="left-icon"class="nav-icon left-icon"></button> 
-      <header>
-        <nav>
-            <ul>
-                <li><img src="/img/pc.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
-                <li><img src="/img/logotipo-de-playstation.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">PLAYSTATION</a></li>
-                <li><img src="/img/xbox.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
-                <li><img src="/img/tecnologia.png"alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
-              </ul>
-        </nav>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-        </div>
-        <img src="/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
-      </header>
-      </div>
-    </div>
-  </nav>
-  
-  <div class="sidebar">
 
-    <button class="border-t border-gray-700">
-      <div class="jjk" ><img src="/img/filtrar-removebg-preview.png" alt="left-icon"class="nav-icon left-icon"></div>
-    </button>
-        
-    <div class="space-y-2">
-      <input class="palabra" placeholder="Palabras clave">
-  
-    </div>
-    <div class="space-y-4 mt-4">
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Género</div>
-      </button>
-      <hr> <!-- Línea horizontal -->
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Precio</div>
-      </button>
-      <hr> <!-- Línea horizontal -->
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Ofertas</div>
-      </button>
-      <hr> <!-- Línea horizontal -->
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Plataforma</div>
-      </button>
-    </div>
-  </div>
-  <div class="content">
-    <div class="text-above-rectangle">
-      <img src="/img/fotousuario.png" alt="Imagen pequeña">
-      LISTA DE DESEADOS DE THESERGIUX
- 
-    </div>
-    <div class="rectangle">
-      <img src="/img/palworld-key-artwork.jpg" alt="Imagen rectángulo 1">
-      <div class="Rec1">
-        <p>Palword</p>
-        <p>RESEÑAS GENERALES: POSITIVAS</p>
-        <p>FECHA DE LANZAMIENTO: 19 ENE 2024</p>
-        <div class="price-and-button">
-          <p>$14.99USD</p>
-          <button class="add-to-cart-button">Añadir al carrito</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List</title>
+    <link rel="stylesheet" href="../../Models/stylo.css">
+    <link rel="stylesheet" href="ListStyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-900 text-white font-'Open Sans'">
+    <div class="header-background">
+        <div class="flex items-center justify-between">
+            <button class="text-xl" id="filtros"><img src="../img/filtrar-removebg-preview.png" alt="left-icon"
+                    class="nav-icon left-icon"></button>
+            <header>
+                <nav>
+                    <ul>
+                        <li><img src="../img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
+                        <li><img src="../img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
+                                href="#">PLAYSTATION</a></li>
+                        <li><img src="../img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a>
+                        </li>
+                        <li><img src="../img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a
+                                href="#">NINTENDO</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <img src="../img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+            </header>
         </div>
-      </div>
-      
     </div>
-    <div class="rectangle">
-      <img src="/img/portada_cyberpunk.jpg" alt="Imagen rectángulo 2">
-      <div class="Rec1">
-        <p>Cyberpunk 2077</p>
-        <p>RESEÑAS GENERALES: MUY POSITIVAS</p>
-        <p>FECHA DE LANZAMIENTO: 9 DIC 2020</p>
-        <div class="price-and-button">
-          <p>$59.99USD</p>
-          <button class="add-to-cart-button">Añadir al carrito</button>
+    </nav>
+
+    <div class="sidebar">
+
+        <button class="border-t border-gray-700">
+            <div class="jjk"><img src="../img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon">
+            </div>
+        </button>
+
+        <div class="space-y-2">
+            <input class="palabra" placeholder="Palabras clave">
+
         </div>
-      </div>
-      
-    </div>
-    <div class="rectangle">
-      <img src="/img/red-dead-redemption-2-portada-3380.jpg" alt="Imagen rectángulo 3">
-      <div class="Rec1">
-        <p>Red Dead Redemption 2</p>
-        <p>RESEÑAS GENERALES: MUY POSITIVAS</p>
-        <p>FECHA DE LANZAMIENTO: 5 DIC 2019</p>
-        <div class="price-and-button">
-          <p>$49.99USD</p>
-          <button class="add-to-cart-button">Añadir al carrito</button>
+        <div class="space-y-4 mt-4">
+            <button class="border-t border-gray-700">
+                <div class="font-medium">Género</div>
+            </button>
+            <hr> <!-- Línea horizontal -->
+            <button class="border-t border-gray-700">
+                <div class="font-medium">Precio</div>
+            </button>
+            <hr> <!-- Línea horizontal -->
+            <button class="border-t border-gray-700">
+                <div class="font-medium">Ofertas</div>
+            </button>
+            <hr> <!-- Línea horizontal -->
+            <button class="border-t border-gray-700">
+                <div class="font-medium">Plataforma</div>
+            </button>
         </div>
-      </div>
-      
     </div>
-    
-    
-  </div>
-  
-</nav>
+    <div class="content">
+        <div class="text-above-rectangle">
+            <img src="../img/fotousuario.png" alt="Imagen pequeña">
+            LISTA DE DESEADOS DE THESERGIUX
+
+        </div>
+        <div class="rectangle">
+            <img src="../img/palworld-key-artwork.jpg" alt="Imagen rectángulo 1">
+            <div class="Rec1">
+                <p>Palword</p>
+                <p>RESEÑAS GENERALES: POSITIVAS</p>
+                <p>FECHA DE LANZAMIENTO: 19 ENE 2024</p>
+                <div class="price-and-button">
+                    <p>$14.99USD</p>
+                    <button class="add-to-cart-button">Añadir al carrito</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="rectangle">
+            <img src="../img/portada_cyberpunk.jpg" alt="Imagen rectángulo 2">
+            <div class="Rec1">
+                <p>Cyberpunk 2077</p>
+                <p>RESEÑAS GENERALES: MUY POSITIVAS</p>
+                <p>FECHA DE LANZAMIENTO: 9 DIC 2020</p>
+                <div class="price-and-button">
+                    <p>$59.99USD</p>
+                    <button class="add-to-cart-button">Añadir al carrito</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="rectangle">
+            <img src="../img/red-dead-redemption-2-portada-3380.jpg" alt="Imagen rectángulo 3">
+            <div class="Rec1">
+                <p>Red Dead Redemption 2</p>
+                <p>RESEÑAS GENERALES: MUY POSITIVAS</p>
+                <p>FECHA DE LANZAMIENTO: 5 DIC 2019</p>
+                <div class="price-and-button">
+                    <p>$49.99USD</p>
+                    <button class="add-to-cart-button">Añadir al carrito</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </nav>
 
 </body>
+
 </html>

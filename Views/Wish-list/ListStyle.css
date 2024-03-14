@@ -1,0 +1,97 @@
+.rectangle {
+    width: 50%;
+    height: 194px; /* Ajusta la altura según sea necesario */
+    background-color: #27263F;
+    margin-bottom: 40px; /* Espacio entre los rectángulos */
+  }
+  
+  .content {
+    display: flex; /* Convertir el contenedor en un contenedor flex */
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    align-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .rectangle:first-child {
+    margin-top: 250px; /* Espacio entre el encabezado y el primer rectángulo */
+    width: 50%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    background-color: #27263F;
+    margin-bottom: 40px; /* Espacio entre los rectángulos */
+  }
+
+  .text-above-rectangle {
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    margin: 60px auto 100px; /* Margen superior e inferior y centrado horizontal */
+    text-align: center; /* Centrado del texto */
+    font-size: 34px; /* Tamaño de la letra */
+  }
+  
+  .text-above-rectangle img {
+    display: inline-block; /* Hace que la imagen se comporte como un elemento en línea */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    width: 110px;
+    height: 110px;
+  }
+
+  .rectangle img {
+    position: absolute; /* Establece la posición absoluta */
+    left: 80; /* Alinea la imagen a la izquierda del rectángulo */
+    max-height: 19%; /* Ajusta la altura máxima de la imagen */
+  }
+  
+
+  .Rec1 {
+    margin-left: 360px; /* Espacio entre la imagen y el contenido del rectángulo */
+    padding: 10px; /* Espaciado dentro del rectángulo */
+    color: white; /* Color del texto */
+  }
+
+  
+  .Rec2{
+    margin-left: 360px; /* Espacio entre la imagen y el contenido del rectángulo */
+    padding: 10px; /* Espaciado dentro del rectángulo */
+    color: white; /* Color del texto */
+  }
+
+  
+  .Rec3 {
+    margin-left: 360px; /* Espacio entre la imagen y el contenido del rectángulo */
+    padding: 10px; /* Espaciado dentro del rectángulo */
+    color: white; /* Color del texto */
+  }
+
+  .Rec1 p{
+    margin-bottom: 15px; /* Espacio entre párrafos dentro de cada rectángulo */
+  }
+
+  .Rec2 p{
+    margin-bottom: 15px; /* Espacio entre párrafos dentro de cada rectángulo */
+  }
+
+  .Rec3 p{
+    margin-bottom: 15px; /* Espacio entre párrafos dentro de cada rectángulo */
+  }
+  
+  .add-to-cart-button {
+    background-color: #71A621; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como un elemento en línea */
+    font-size: 16px; /* Tamaño del texto */
+    margin-top: 10px; /* Espacio superior */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #5A8F18; /* Color de fondo del botón al pasar el ratón */
+  }
+  
+  .price-and-button {
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
