@@ -6,7 +6,7 @@
 
 body {
     font-family: 'TuFuente', sans-serif;
-    background-image: url(img/hola.webp);
+    background-image: url(../img/hola.webp);
     background-size: cover;
     background-attachment: fixed;
     /* Fija la imagen de fondo */

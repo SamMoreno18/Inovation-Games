@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Store</title>
+  <title>Innovation Games</title>
   <link rel="stylesheet" href="Models/stylo.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -20,12 +20,12 @@
           class="nav-icon left-icon"></button>
       <div class="navbar">
         <div class="dropdown">
-          <button class="dropbtn" onclick="myFunction()">Cuenta
+          <button class="dropbtn" onclick="myFunction()">Account
           </button>
           <div class="dropdown-content" id="myDropdown">
-            <a href="index.html">Iniciar secion</a>
-            <a href="Views/cuenta/cuenta.html">Ver mi perfil</a>
-            <a href="#">Conviertete en desarollador</a>
+            <a href="login.html">Login</a>
+            <a href="Views/cuenta/cuenta.html">My profile</a>
+            <a href="/Views/Wish-list/wish-list.html">My wish list</a>
           </div>
         </div>
       </div>
@@ -34,9 +34,9 @@
           <ul>
             <li><img src="Views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/pc/pc.html">PC</a></li>
             <li><img src="Views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
-                href="Views/ps/ps.html">PLAYSTATION</a></li>
-            <li><img src="Views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/xbox/xbox.html">XBOX</a></li>
-            <li><img src="Views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/nintendo/nintendo.html">NINTENDO</a></li>
+                href="Views/ps/ps.html">PlayStation</a></li>
+            <li><img src="Views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/xbox/xbox.html">Xbox</a></li>
+            <li><img src="Views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/nintendo/nintendo.html">Nintendo</a></li>
           </ul>
         </nav>
         <div class="search-bar">
@@ -59,22 +59,22 @@
 
     <div class="space-y-4 mt-4">
       <button id="genero-btn" class="border-t border-gray-700">
-        <div class="font-medium">Género</div>
+        <div class="font-medium">Gender</div>
       </button>
       <div id="genero-options" class="hidden">
-        <div><button class="accion" id="accion" name="accion">-Acción</button></div>
-        <div><button class="accion" id="aventura" name="aventura">-Aventura</button></div>
-        <div><button class="accion" id="estrategia" name="estrategia">-Estrategia</button></div>
+        <a href="Views/Filtro/filtro_accion.html"><div><button class="accion" id="accion" name="accion">-Action</button></div></a>
+        <div><button class="accion" id="aventura" name="aventura">-Adventure</button></div>
+        <div><button class="accion" id="estrategia" name="estrategia">-Strategy</button></div>
       </div>
 
 
       <hr>
       <button class="border-t border-gray-700">
-        <div class="font-medium">Precio</div>
+        <div class="font-medium">Price</div>
       </button>
       <hr>
       <button class="border-t border-gray-700">
-        <a href="Views/Ofertas/ofertas.html">Ofertas</a>
+        <a href="Views/Ofertas/ofertas.html">Offers</a>
     </div>
     </button>
   </div>
@@ -83,32 +83,31 @@
 
   </nav>
   <!-- Hero Section -->
-  <section class="hero-section text-center p-20 bg-blue-600 bg-opacity-25"
-    style="background-image: url('Views/img/pal.jpg');">
+  <section id="hero-section" class="hero-section text-center p-20 bg-blue-600 bg-opacity-25">
     <h1 class="text-5xl font-bold mb-6">The Adventure of The Game Begins Here!</h1>
     <p class="mb-6">Navigate to new gaming universes. At Gaming Galaxia, every moment is an adventure. Dive into the
       endless world of video games now.</p>
   </section>
-
+  
   <section class="si">
     <p class="text-2xl mb-6">Trending</p>
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
           <a href="Views/Remn/remnant.html">
-            <img src="Views/img/cap1.png" alt="Imagen 1">
+            <img src="Views/img/Helldivers2.png" alt="Imagen 1">
         </div>
         <div class="carousel-item">
           <a href="Views/BaldursGate/baldurgate.html">
-            <img src="Views/img/cap2.png" alt="Imagen 2">
+            <img src="Views/img/Baldursgame.png" alt="Imagen 2">
         </div>
         <div class="carousel-item">
-          <a href="Views/GTA/GTA.html">
-            <img src="Views/img/cap3.png" alt="Imagen 3">
+          <a href="Views/Lethal Company/lethal.html">
+            <img src="Views/img/lethal2.png" alt="Imagen 3">
         </div>
         <div class="carousel-item">
           <a href="Views/Rust/rust.html">
-            <img src="Views/img/cap4.png" alt="Imagen 4">
+            <img src="Views/img/palwordjuego1_.png" alt="Imagen 4">
         </div>
       </div>
     </div>
@@ -120,22 +119,22 @@
       <div class="carousel-inner">
         <div class="carousel-item">
           <a href="Views/Cyberpunk/ciberp.html">
-            <img src="Views/img/cap5.png" alt="Imagen 1">
+            <img src="Views/img/Cyberpunkgame.png" alt="Imagen 1">
           </a>
         </div>
         <div class="carousel-item">
           <a href="Views/HollowKnight/HK.html">
-            <img src="Views/img/cap9.png" alt="Imagen 2">
+            <img src="Views/img/hollowknightgame.png" alt="Imagen 2">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/Red Dead Redemption/rdr.html">
-            <img src="Views/img/cap7.png" alt="Imagen 3">
+          <a href="Views/GTA/GTA.html">
+            <img src="Views/img/GtaChi.png" alt="Imagen 3">
           </a>
         </div>
         <div class="carousel-item">
           <a href="Views/Civilization/civilization.html">
-            <img src="Views/img/cap8.png" alt="Imagen 4">
+            <img src="Views/img/Civilizationgame.png" alt="Imagen 4">
           </a>
         </div>
       </div>
