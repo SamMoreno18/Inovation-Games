@@ -6,7 +6,7 @@
 
 body {
     font-family: 'TuFuente', sans-serif;
-    background-image: url(img/bg-rem.avif);
+    background-image: url(../img/bg-rem.avif);
     background-size: cover;
     background-attachment: fixed;
     /* Fija la imagen de fondo */
