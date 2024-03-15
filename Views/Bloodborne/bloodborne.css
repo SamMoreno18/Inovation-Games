@@ -6,7 +6,7 @@
 
 body {
     font-family: 'TuFuente', sans-serif;
-    background-image: url(../img/fearback.jpg);
+    background-image: url(../img/bloodbornebg.jpg);
     background-size: cover;
     background-attachment: fixed;
     /* Fija la imagen de fondo */
@@ -49,7 +49,7 @@ header {
     justify-content: center;
     padding: 10px;
     margin: auto;
-    background-color: #000000;
+    background-color: #191a1c;
 }
 
 .nav-icon {
@@ -109,7 +109,7 @@ main {
 }
 
 .tab:hover {
-    background-color: #000000;
+    background-color: #020205;
     border-color: #666;
 }
 
@@ -157,7 +157,7 @@ main {
     width: 100%;
     margin-bottom: 10px;
     color: #ffffff;
-    background-color: #553524;
+    background-color: #13151b;
     border-color: transparent;
 
 }
@@ -216,7 +216,7 @@ mark {
 }
 
 .star3.active {
-    color: rgb(53, 48, 22);
+    color: rgb(0, 0, 0);
 }
 
 

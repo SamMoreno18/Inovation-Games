@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God Of War Ragnarock</title>
+  <link rel="stylesheet" href="gowrag.css">
+  <link rel="stylesheet" href="../../Models/stilo.css">
+</head>
+
+<body>
+  <nav>_</nav>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="../img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="../pc/pc.html">PC</a></li>
+            <li><img src="../img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="../ps/ps.html">PLAYSTATION</a></li>
+            <li><img src="../img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="../xbox/xbox.html">XBOX</a></li>
+            <li><img src="../img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="../nintendo/nintendo.html">NINTENDO</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+    <img src="../img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+  </header>
+
+  <main>
+    <div class="fixed-background"></div>
+    <div class="content-container">
+      <div class="video-and-requirements">
+        <div class="image-cont" id="image-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vtFhDrMIZjE?si=fT9dSxCeWZJcsscL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img id="image4" src="../img/gowrcapyt.png" alt="Hollow Knight" class="Hollow"
+            onclick="showVideo();">
+          <img id="image1" src="../img/gowrcap1.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/fearcap1.jpg');">
+          <img id="image1" src="../img/gowrcap2.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/cbp2.jpg');">
+          <img id="image3" src="../img/gowrcap3.jpeg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/cbp3.jpg');">
+
+          <div class="sidebar">
+            <img src="../img/gowrlogo.png" alt="logo Icon" class="logo-icon">
+            <div class="purchase-options">
+              <div class="compra">
+                <button>COMPRALO YA</button>
+              </div>
+              <button>AGREGAR AL CARRITO</button>
+              <button>A LISTA DE DESEOS</button>
+            </div>
+            <div class="price">
+              <span class="sale-price">$829.69</span>
+            </div>
+            <div class="publisher">
+              <strong>SIE Santa Monica Studio</strong>
+              <span>09/11/22</span>
+            </div>
+            <div class="rating3">
+              <span>Calificaciones de jugadores</span>
+              <div class="stars3" id="rating-stars3">
+                <span class="star3" data-value="1">★</span>
+                <span class="star3" data-value="2">★</span>
+                <span class="star3" data-value="3">★</span>
+                <span class="star3" data-value="4">★</span>
+                <span class="star3" data-value="5">★</span>
+              </div>
+            </div>
+          </div>
+          <div>_</div>
+
+          <div class="system-requirements bg-gray-800 text-white p-6 max-w-2xl mx-auto rounded-lg">
+            <ul class="tabs2 flex justify-between mb-4">
+              <button class="tab2 px-3 py-1 rounded cursor-pointer" onclick="changeTab('windows')">General</button>
+            </ul>
+            <div id="windows" class="requirements">
+              <h2 class="text-lg mb-2">REQUISITOS DEL SISTEMA</h2>
+              <div>.</div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 class="section-title">MÍNIMO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details">64-bit Windows 10</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details">Core i7-6700 or Ryzen 5 1600</span>
+                  </p>
+                  <p><span class="title">Memoria:</span> <span class="details">12 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details">GeForce GTX 1060 6GB or Radeon RX 580
+                      8GB or Arc A380</span></p>
+                  <p><span class="title">DirectX:</span> <span class="details">Versión 12</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">70 GB de espacio disponible</span>
+                  </p>
+                  <p><span class="title">Notas adicionales:</span> <span class="details">SSD requiered</span></p>
+                </div>
+                <div>
+                  <h3 class="section-title">RECOMENDADO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details">64-bit Windows 10</span></p>
+                  <p><span class="title">Procesador:</span> <span class="details">Core i7-12700 or Ryzen 7
+                      7800X3D</span></p>
+                  <p><span class="title">Memoria:</span> <span class="details">16 GB de RAM</span></p>
+                  <p><span class="title">Gráficos:</span> <span class="details">GeForce GTX 1060 6GB or Radeon RX 580
+                      8GB or Arc A380</span></p>
+                  <p><span class="title">DirectX:</span> <span class="details">Versión 12</span></p>
+                  <p><span class="title">Almacenamiento:</span> <span class="details">70 GB de espacio disponible</span>
+                  </p>
+                  <p><span class="title">Notas adicionales:</span> <span class="details">SSD requiered</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <script src="/Models/script.js"></script>
+  <script src="../../Models/sistema.js"></script>
+</body>
+
+</html>
