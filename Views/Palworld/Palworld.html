@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PalWorld</title>
+  <link rel="stylesheet" href="palworld.css">
+  <link rel="stylesheet" href="../../Models/stilo.css">
+</head>
+
+<body>
+  <nav><br></nav>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="../img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
+        <li><img src="../img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
+            href="#">PlayStation</a></li>
+        <li><img src="../img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">Xbox</a></li>
+        <li><img src="../img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">Nintendo</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+    <img src="../img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+  </header>
+
+  <main>
+    <div class="fixed-background"></div>
+    <div class="content-container">
+      <div class="video-and-requirements">
+        <div class="image-cont" id="image-container">
+          <iframe id="videoFrame" width="560" height="315"
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/D9w97KSEAOo?si=J9LVkHbT16OP_n5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <img id="image4" src="../img/trailersspal.png" alt="Hollow Knight" class="Hollow"
+            onclick="showVideo();">
+          <img id="image1" src="../img/Gmp-pal1.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/Gmp-pal1.jpg');">
+          <img id="image1" src="../img/Gmp-pal2.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/Gmp-pal2.jpg');">
+          <img id="image3" src="../img/Gmp-pal3.jpg" alt="Hollow Knight" class="Hollow"
+            onclick="changeToImage('../img/Gmp-pal3.jpg');">
+
+          <div class="sidebar">
+            <img src="../img/logo-palworld.png" alt="logo Icon" class="logo-icon">
+            <div class="purchase-options">
+              <div class="compra">
+                <button>Buy it!</button>
+              </div>
+              <button>Add to cart</button>
+              <button>Add to Wish-list</button>
+            </div>
+            <div class="price">
+              <span class="sale-price">$1299</span>
+            </div>
+            <div class="publisher">
+              <strong>Rockstar Games</strong>
+              <span>05/11/19</span>
+            </div>
+            <div class="rating1">
+              <span>Player's Rating</span>
+              <div class="stars1" id="rating-stars">
+                <span class="star1" data-value="1">★</span>
+                <span class="star1" data-value="2">★</span>
+                <span class="star1" data-value="3">★</span>
+                <span class="star1" data-value="4">★</span>
+                <span class="star1" data-value="5">★</span>
+              </div>
+            </div>
+          </div>
+          <div><br></div>
+
+          <div class="system-requirements bg-gray-800 text-white p-6 max-w-2xl mx-auto rounded-lg">
+            <ul class="tabs1 flex justify-between mb-4">
+              <button class="tab1 px-3 py-1 rounded cursor-pointer" onclick="changeTab('windows')">General</button>
+            </ul>
+            <div id="windows" class="requirements">
+              <h2 class="text-lg mb-2">System Requirements</h2>
+              <div>.</div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 class="section-title">MÍNIMO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details">Windows 10 - April 2018 Update (v1803)</span>
+                  </p>
+                  <p><span class="title">Processor:</span> <span class="details">Intel® Core™ i7-4770K / AMD Ryzen 5
+                      1500X</span></p>
+                  <p><span class="title">Memory:</span> <span class="details">12 GB de RAM</span></p>
+                  <p><span class="title">Graphic card:</span> <span class="details">Nvidia GeForce GTX 1060 6GB / AMD
+                      Radeon
+                      RX 480 4GB</span></p>
+                  <p><span class="title">Red:</span> <span class="details">Connection to internet</span></p>
+                  <p><span class="title">Management:</span> <span class="details">150 GB
+                    </span></p>
+                  <p><span class="title">Aditional notes:</span> <span class="details">Direct X Compatible</span></p>
+                </div>
+                <div>
+                  <h3 class="section-title">RECOMENDADO:</h3>
+                  <p><span class="title"></span> <span class="details">Requiere un procesador y un sistema operativo de
+                      64 bits</span></p>
+                  <p><span class="title">SO:</span> <span class="details">Windows 10 - April 2018 Update (v1803)</span>
+                  </p>
+                  <p><span class="title">Processor:</span> <span class="details">Intel® Core™ i7-4770K / AMD Ryzen 5
+                      1500X</span></p>
+                  <p><span class="title">Memory:</span> <span class="details">12 GB de RAM</span></p>
+                  <p><span class="title">Graphic card:</span> <span class="details">Nvidia GeForce GTX 1060 6GB / AMD
+                      Radeon
+                      RX 480 4GB</span></p>
+                  <p><span class="title">Red:</span> <span class="details">Connection to internet</span></p>
+                  <p><span class="title">Management:</span> <span class="details">150 GB
+                    </span></p>
+                  <p><span class="title">Aditional notes:</span> <span class="details">Direct X Compatible</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <script src="../HollowKnight/script.js"></script>
+  <script src="../../Models/sistema.js"></script>
+</body>
+
+</html>
