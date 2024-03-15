@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 body {
-    font-family: 'TuFuente', sans-serif; 
-    background-image: url(img/bg-baldur.webp);
+    font-family: 'TuFuente', sans-serif;
+    background-image: url(../img/bg-baldur.webp);
     background-size: cover;
-    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-attachment: fixed;
+    /* Fija la imagen de fondo */
     position: relative;
     background-position: center;
     z-index: -1;
@@ -26,12 +27,13 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     padding: 50px;
-    margin:  auto;
-    max-width: 1200px; 
+    margin: auto;
+    max-width: 1200px;
     margin-left: 20px;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -52,14 +54,14 @@ body::before {
 header {
     width: 50%;
     height: 50px;
-    border-radius: 25px; 
+    border-radius: 25px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 10px;
-    margin: auto; 
-    background-color: #525252; 
-    
+    margin: auto;
+    background-color: #525252;
+
 }
 
 .nav-icon {
@@ -72,7 +74,8 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que los ítems se envuelvan si no caben */
+    flex-wrap: wrap;
+    /* Permite que los ítems se envuelvan si no caben */
 }
 
 nav ul li {
@@ -97,12 +100,13 @@ nav ul li a {
 }
 
 .hamburger-menu {
-    display: none; /* Asegura que el botón esté oculto por defecto */
+    display: none;
+    /* Asegura que el botón esté oculto por defecto */
     flex: 1;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: none; 
+    border: none;
 }
 
 
@@ -118,23 +122,26 @@ nav ul li a {
         width: 100%;
         padding: 20px 0;
         position: absolute;
-        top: 60px; 
+        top: 60px;
         left: 0;
-        background-color: transparent; 
-        z-index: 1; /* Asegúrate de que el menú esté sobre otros elementos */
+        background-color: transparent;
+        z-index: 1;
+        /* Asegúrate de que el menú esté sobre otros elementos */
     }
 
     .nav-links {
         display: flex;
     }
-    
+
     @media screen and (max-width: 768px) {
         .hamburger-menu {
-            display: flex; /* Muestra el botón en pantallas pequeñas */
+            display: flex;
+            /* Muestra el botón en pantallas pequeñas */
         }
-    
+
         .nav-links {
-            display: none; /* Oculta los enlaces de navegación por defecto en pantallas pequeñas */
+            display: none;
+            /* Oculta los enlaces de navegación por defecto en pantallas pequeñas */
             flex-direction: column;
             width: 100%;
             padding: 20px 0;
@@ -144,44 +151,45 @@ nav ul li a {
             background-color: transparent;
             z-index: 1;
         }
-    
+
         .nav-links.active {
-            display: flex; /* Muestra el menú cuando se activa el botón de hamburguesa */
+            display: flex;
+            /* Muestra el menú cuando se activa el botón de hamburguesa */
         }
-    
+
         header {
             flex-direction: column;
-            padding: 10px; 
+            padding: 10px;
         }
     }
 }
 
 .tab:hover {
-    background-color: #525252; 
+    background-color: #525252;
     border-color: #666;
-  }
+}
 
 .image-cont {
     width: 100%;
     max-width: 550px;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 .Hollow {
     width: 100%;
     max-width: 130px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .Hollow img {
-    max-width: 100%; 
-    height: 60px; 
+    max-width: 100%;
+    height: 60px;
 }
 
 
 .sidebar {
-    flex: 5; 
-    max-width: 350px; 
+    flex: 5;
+    max-width: 350px;
     margin-left: 20px;
 
 }
@@ -192,40 +200,41 @@ nav ul li a {
 }
 
 .purchase-options button {
-    width: 100%; 
+    width: 100%;
     margin-bottom: 15px;
     color: #ffffff;
-    background-color: transparent;  
+    background-color: transparent;
     height: 40px;
     border-color: #FFFFFF;
- 
+
 }
 
-.compra button{
-    width: 100%; 
+.compra button {
+    width: 100%;
     margin-bottom: 10px;
     color: #ffffff;
     background-color: #525252;
     border-color: transparent;
-    
+
 }
 
 .price {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-bottom: 20px;
 
 }
 
-.discount, .sale-price {
+.discount,
+.sale-price {
     color: #FFFFFF;
 }
 
-.original-price{
+.original-price {
     color: #AAAAAE;
 }
 
-mark{
+mark {
     color: #ffffff;
     background-color: #520808;
 }
@@ -242,7 +251,7 @@ mark{
     height: 40px;
 }
 
-.rating span{
+.rating span {
     display: block;
     color: white;
     width: 100%;
@@ -254,7 +263,7 @@ mark{
 }
 
 .game-media {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 a {
@@ -271,73 +280,71 @@ button {
 }
 
 .video-and-requirements {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .sidebar {
     margin-top: 85px;
     position: absolute;
-    top: 0; 
-    right: 0; 
+    top: 0;
+    right: 0;
     margin-left: 980px;
     left: 0px;
 }
 
 .system-requirements {
-    background-color: transparent; 
+    background-color: transparent;
     color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tabs {
+}
+
+.tabs {
     list-style: none;
     padding: 0;
     margin: 0 0 20px 0;
     border-bottom: 1px solid #444;
-  }
-  
-  .tab {
+}
+
+.tab {
     display: inline-block;
     margin-right: 10px;
     padding: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
     transition: all 0.3s ease;
-  }
-  
-  .tab:hover {
-    background-color: #1F2544; 
+}
+
+.tab:hover {
+    background-color: #1F2544;
     border-color: #666;
-  }
-  
-  .requirements {
-    display: none; 
-  }
-  
-  .requirements.active {
-    display: block; 
-  }
-  
-  .grid {
+}
+
+.requirements {
+    display: none;
+}
+
+.requirements.active {
+    display: block;
+}
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .title {
+}
+
+.title {
     font-weight: bold;
     color: #989696;
-  }
-  
-  .details {
+}
+
+.details {
     margin-left: 5px;
-  }
-  
-  
+}

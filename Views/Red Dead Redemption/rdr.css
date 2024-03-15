@@ -6,7 +6,7 @@
 
 body {
     font-family: 'TuFuente', sans-serif;
-    background-image: url(img/red_dead_redemption_2_2017.jpg);
+    background-image: url(../img/red_dead_redemption_2_2017.jpg);
     background-size: cover;
     background-attachment: fixed;
     /* Fija la imagen de fondo */
