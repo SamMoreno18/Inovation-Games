@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   document.addEventListener('DOMContentLoaded', function() {
     var images = [
-      'Views/img/pal.jpg',
-      'Views/img/dead_.png',
-      'Views/img/helldivers2.jpg',
-      'Views/img/hellsing.png',
+      'Views/img/minecraftheader1.jpg',
+      'Views/img/forzahead1.jpg',  
+      'Views/img/chichihell.jpg',
+      'Views/img/starhead.jpg',
     ];
   
     var currentImageIndex = 0;
