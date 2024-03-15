@@ -6,7 +6,7 @@
 
 body {
     font-family: 'TuFuente', sans-serif;
-    background-image: url(../img/fearback.jpg);
+    background-image: url(../img/phasmobg.jpg);
     background-size: cover;
     background-attachment: fixed;
     /* Fija la imagen de fondo */
@@ -50,7 +50,7 @@ header {
     justify-content: center;
     padding: 10px;
     margin: auto;
-    background-color: #000000;
+    background-color: #262954;
 }
 
 .nav-icon {
@@ -88,7 +88,7 @@ header nav ul li a {
 .search-bar input[type="text"] {
     padding: 5px;
     border: 2px solid #FFFFFF;
-    background-color: #000000;
+    background-color: #00034e;
     border-radius: 20px;
     border-color: #ffffff;
     margin: 0 10px;
@@ -158,7 +158,7 @@ main {
     width: 100%;
     margin-bottom: 10px;
     color: #ffffff;
-    background-color: #553524;
+    background-color: #08075b;
     border-color: transparent;
 
 }
