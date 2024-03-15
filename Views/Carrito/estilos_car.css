@@ -141,22 +141,3 @@ input:not(:last-child) {
 }
 
 
-/* ...Estilos existentes... */
-
-/* Ajustes para el contenedor principal para centrar y agregar espacio alrededor */
-.container.mt-3 {
-  max-width: 1140px; /* Ajustar según necesidades específicas */
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Espacio entre columnas */
-}
-
-/* Estilos para las columnas */
-.col-lg-5, .col-lg-7 {
-  flex: 1; /* Hace que ambas columnas se expandan para llenar el espacio disponible */
-}
-
-/* Si necesitas más control, puedes añadir más estilos específicos para .col-lg-5 y .col-lg-7 */
-
-/* ... */
