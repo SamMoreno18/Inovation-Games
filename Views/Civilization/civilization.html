@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Civilization</title>
-<link rel="stylesheet" href="/civilization.css">
-<link rel="stylesheet" href="/paginota/stilo.css">
+<link rel="stylesheet" href="civilization.css">
+<link rel="stylesheet" href="../../Models/stilo.css">
 </head>
 <body>
     <nav>_</nav>
     <header>
       <nav>
           <button class="hamburger-menu">
-              <img src="/img/menu-removebg-preview.png" alt="Menu Icon">
+              <img src="../img/menu-removebg-preview.png" alt="Menu Icon">
           </button>
           <ul class="nav-links">
-              <li><img src="/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
-              <li><img src="/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PLAYSTATION</a></li>
-              <li><img src="/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
-              <li><img src="/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
+              <li><img src="../img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PC</a></li>
+              <li><img src="../img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">PLAYSTATION</a></li>
+              <li><img src="../img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">XBOX</a></li>
+              <li><img src="../img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="#">NINTENDO</a></li>
           </ul>
       </nav>
       <div class="search-bar">
           <input type="text" placeholder="Search...">
       </div>
-      <img src="/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+      <img src="../img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
     </header>
 
   <main>
@@ -33,13 +33,13 @@
         <div class="video-and-requirements">
             <div class="image-cont" id="image-container">
         <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/5KdE0p2joJw?si=plUhuz2heozR2uzr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <img id="image4" src="/img/Captura de pantalla 2024-02-18 181602.png" alt="Hollow Knight" class="Hollow" onclick="showVideo();">
-        <img id="image1" src="/img/civi-1.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('/img/civi-1.jpg');">
-        <img id="image1" src="/img/civi-2.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('/img/civi-2.jpg');">
-        <img id="image3" src="/img/civi-3.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('/img/civi-3.jpg');">
+        <img id="image4" src="../img/Captura de pantalla 2024-02-18 181602.png" alt="Hollow Knight" class="Hollow" onclick="showVideo();">
+        <img id="image1" src="../img/civi-1.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-1.jpg');">
+        <img id="image1" src="../img/civi-2.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-2.jpg');">
+        <img id="image3" src="../img/civi-3.jpg" alt="Hollow Knight" class="Hollow" onclick="changeToImage('../img/civi-3.jpg');">
 
         <div class="sidebar">
-            <img src="/img/logo-civi-removebg-preview.png" alt="logo Icon" class="logo-icon">
+            <img src="../img/logo-civi-removebg-preview.png" alt="logo Icon" class="logo-icon">
             <div class="purchase-options">
                 <div class="compra">
                     <button>COMPRALO YA</button>
@@ -129,8 +129,9 @@
       </div>
 </main>
 
-<script src="script.js"></script>
-<script src="/paginota/sistema.js"></script>
+<script src="../../Models/script.js"></script>
+<script src="../HollowKnight/script.js"></script>
+<script src="../../Models/sistema.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
       var hamburgerMenuButton = document.querySelector('.hamburger-menu');

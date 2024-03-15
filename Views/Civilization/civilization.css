@@ -6,7 +6,7 @@
   
 body {
     font-family: 'TuFuente', sans-serif; 
-    background-image: url(img/bg-civi.jpg);
+    background-image: url(../img/bg-civi.jpg);
     background-size: cover;
     background-attachment: fixed; /* Fija la imagen de fondo */
     position: relative;
