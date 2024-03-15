@@ -308,3 +308,529 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const stars7 = document.querySelectorAll('.star7');
+    const rating7Key = 'userRating7'; 
+    const savedRating7 = localStorage.getItem(rating7Key);
+    if (savedRating7) {
+        updateStars(savedRating7);
+    }
+    stars7.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            updateStars(value);
+            localStorage.setItem(rating7Key, value);
+            this.classList.add('pop');
+            setTimeout(() => {
+                this.classList.remove('pop');
+            }, 400);
+        });
+    });
+    function updateStars(value) {
+        stars7.forEach(star => {
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+});

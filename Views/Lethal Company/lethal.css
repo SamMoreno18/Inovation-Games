@@ -211,13 +211,13 @@ mark {
 
 .star3 {
     font-size: 24px;
-    color: gray;
+    color: rgb(211, 248, 5);
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .star3.active {
-    color: rgb(53, 48, 22);
+    color: rgb(255, 247, 0);
 }
 
 
