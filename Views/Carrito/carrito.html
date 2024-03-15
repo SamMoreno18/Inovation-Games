@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos_car.css">
+    <script src="https://kit.fontawesome.com/tu-codigo-font-awesome.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <!-- Sección Izquierda: Método de Pago (ahora 4 columnas) -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Método de Pago</h3>
+                        <div class="wrapper">
+                            <div class="credit-card">
+                                <div class="card-front">
+                                    <div class="branding">
+                                      <img src="/Views/img/ima/chip-removebg-preview.png" class="chip-img" />
+                                      <img src="/Views/img/ima/Visa-Logo.png" class="visa-logo" />
+                                    </div>
+                                    <div class="card-number">
+                                      <div>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                      </div>
+                                      <div>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                      </div>
+                                      <div>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                      </div>
+                                      <div>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                        <span class="card-number-display">_</span>
+                                      </div>
+                                    </div>
+                                    <div class="details">
+                                      <div>
+                                        <span>Card Holder</span>
+                                        <span id="card-holder-name">Your Name Here</span>
+                                      </div>
+                                      <div>
+                                        <span>Expires</span>
+                                        <span id="validity">06/28</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="card-back">
+                                    <div class="card-back">
+                                        <div class="black-strip"></div>
+                                        <div class="white-strip">
+                                          <span>CVV</span>
+                                          <div id="cvv-display"></div>
+                                        </div>
+                                        <img src="/Views/img/ima/Visa-Logo.png" class="visa-logo" />
+                                      </div>
+                                </div>
+                            </div>
+                            <form>
+                                <label for="card-number">Card Number</label>
+                                <input type="number" id="card-number" placeholder="1234123412341234" />
+                                <label for="card-holder">Card Holder:</label>
+                                <input type="text" id="card-name-input" placeholder="Your Name" />
+                                <div class="date-cvv">
+                                  <div>
+                                    <label for="validity">Expires On:</label>
+                                    <input type="date" id="validity-input" />
+                                  </div>
+                                  <div>
+                                    <label for="cvv">CVV:</label>
+                                    <input type="number" id="cvv" placeholder="***" />
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sección Derecha: Resumen del Pedido (ahora 8 columnas) -->
+            <div class="col-md-8">
+                <div class="card">
+                            <div class="card-header">
+                                RESUMEN DEL PEDIDO
+                                <button type="button" class="close" data-dismiss="card" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="media">
+                                    <img src="/Views/img/ima/Nightingale.jpg" class="mr-3" alt="Nightingale" style="width: 60px;">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Nightingale</h5>
+                                        <p>-10% <s>334,99 MXN</s> 301,49 MXN</p>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Precio <span class="float-right">334,99 MXN</span></li>
+                                    <li class="list-group-item">Descuento de la oferta <span class="float-right">-33,50 MXN</span></li>
+                                    <li class="list-group-item">IVA incluido (si es aplicable) <span class="float-right"></span></li>
+                                    <li class="list-group-item"><strong>Total <span class="float-right">301,49 MXN</span></strong></li>
+                                </ul>
+                                <p class="card-text mt-3">
+                                    <small class="text-success">Consigue 15,08 MXN en recompensas de Epic con esta compra.</small>
+                                </p>
+                                <input type="text" class="form-control mb-3" placeholder="Introduce un nombre de creador">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Haz clic aquí si estás de acuerdo con compartir tu correo electrónico con Inflextion Studios Inc...</label>
+                                </div>
+                                <button type="button" class="btn btn-link p-0 mb-3" data-toggle="modal" data-target="#termsModal">Ver términos y condiciones</button>
+                                <!-- Modal para términos y condiciones -->
+                                <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Aquí van los términos y condiciones detallados...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block">REALIZAR PEDIDO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.7.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="ruta/a/card.js"></script>
+<script src="/Models/scriptcar.js"></script>
+</body>
+</html>
