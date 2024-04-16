@@ -1,3 +1,35 @@
+<?php 
+    require 'Base de Datos/php/login.php';
+    if (isset($_SESSION['id'])){
+        header('Location: index.php');
+    }
+
+    $iniciosesion = new Inicio_sesion();
+        if (isset($_POST['submit'])){
+            $result = $iniciosesion->InicioSesion(
+            $_POST['logEmail'],
+            $_POST['logPass']   
+            );
+
+            if ($result == 1){
+                $_SESSION['iniciosesion'] = true;
+                $_SESSION['id'] = $iniciosesion->IdUsuario();
+
+                header('Location: index.php');
+            } else if ($result == 10){
+                echo"<script>Alert('Incorrect password') </script>";
+            } else if ($result == 100){
+                echo"<script>Alert('User not found') </script>";
+            }
+
+        }
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,11 +56,11 @@
                 </div>
                 <div class="input-group">
                     <div class="input-field">
-                        <input type="text" class="input-box" id="logEmail" required>
-                        <label for="logEmail">Email address</label>
+                        <input type="text" class="input-box" id="logEmail" name = "logEmail" required>
+                        <label for="logEmail">Email address or Username</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input-box" id="logPassword" required>
+                        <input type="password" class="input-box" id="logPassword" name="logPass" required>
                         <label for="logPassword">Password</label>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myLogPassword()">
@@ -42,7 +74,8 @@
                         <label for="formCheck">Remember Me</label>
                     </div>
                     <div class="input-field">
-                        <a href="index.html"><input type="submit" class="input-submit" value="Sign In" required></a>
+                        <button name="submit" type="submit" class="input-submit" value="Sign In" required></button>
+                        <a href="index.php"></a>
                     </div>
                     <div class="forgot">
                         <a href="#">Forgot password?</a>

@@ -23,7 +23,7 @@
           <button class="dropbtn" onclick="myFunction()">Account
           </button>
           <div class="dropdown-content" id="myDropdown">
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
             <a href="Views/cuenta/cuenta.html">My profile</a>
             <a href="Views/Wish-list/wish-list.html">My wish list</a>
           </div>
