@@ -1,5 +1,5 @@
 <?php 
-    require 'Base de Datos/php/login.php';
+    require 'Base de Datos/php/funciones.php';
     if (isset($_SESSION['id'])){
         header('Location: index.php');
     }
@@ -54,6 +54,7 @@
                     <h3>Hello</h3>
                     <small>Welcome to Inovation Games</small>
                 </div>
+                <form action="Base de Datos/php/funciones.php" method="POST">
                 <div class="input-group">
                     <div class="input-field">
                         <input type="text" class="input-box" id="logEmail" name = "logEmail" required>
@@ -74,14 +75,16 @@
                         <label for="formCheck">Remember Me</label>
                     </div>
                     <div class="input-field">
-                        <button name="submit" type="submit" class="input-submit" value="Sign In" required></button>
-                        <a href="index.php"></a>
+                        <button name="submit" type="submit" class="input-submit" value="Sign In" required>
+                        <a href="index.php">Sign In</a></button>
+                        
                     </div>
                     <div class="forgot">
                         <a href="#">Forgot password?</a>
                     </div>
 
                 </div>
+                </form>
             </div>
             <!---------------------------- register --------------------------------------->
             <div class="box-register" id="register">
