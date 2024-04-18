@@ -1,163 +1,182 @@
+<?php
+require 'funciones_php/funciones.php';
+if (isset($_SESSION['id'])) {
+    header('Location: landing.php');
+}
+
+$iniciosesion = new Inicio_sesion();
+if (isset($_POST['submit'])) {
+    $result = $iniciosesion->InicioSesion(
+        $_POST['logEmail'],
+        $_POST['logPass']
+    );
+
+    if ($result == 1) {
+        $_SESSION['iniciosesion'] = true;
+        $_SESSION['id'] = $iniciosesion->IdUsuario();
+
+        header('Location: landing.php');
+    } else if ($result == 10) {
+        echo "<script>Alert('Incorrect password') </script>";
+    } else if ($result == 100) {
+        echo "<script>Alert('User not found') </script>";
+    }
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovation Games</title>
-  <link rel="stylesheet" href="Models/stylo.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Inicio de Sesion</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css">  -->
+    <link rel="stylesheet" href="Models/assets/css/styles.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
 </head>
 
-<body class="bg-gray-900 text-white font-'Open Sans'">
-  <div class="header-background">
-    <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="Views/img/filtrar-removebg-preview.png" alt="left-icon"
-          class="nav-icon left-icon"></button>
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn" onclick="myFunction()">Account
-          </button>
-          <div class="dropdown-content" id="myDropdown">
-            <a href="login.php">Login</a>
-            <a href="Views/cuenta/cuenta.html">My profile</a>
-            <a href="Views/Wish-list/wish-list.html">My wish list</a>
-          </div>
+<body>
+    <span class="login-mask"></span>
+
+    <div class="container">
+        <div class="box">
+            <div class="box-login" id="login">
+                <div class="top-header">
+                    <h3>Hello</h3>
+                    <small>Welcome to Inovation Games</small>
+                </div>
+                <form action="" method="POST">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="text" class="input-box" id="logEmail" name="logEmail" required>
+                            <label for="logEmail">Email address or Username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input-box" id="logPassword" name="logPass" required>
+                            <label for="logPassword">Password</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="myLogPassword()">
+                                    <i class="fa-regular fa-eye" id="eye"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="remember">
+                            <input type="checkbox" id="formCheck" class="check">
+                            <label for="formCheck">Remember Me</label>
+                        </div>
+                        <div class="input-field">
+                            <button name="submit" type="submit" class="input-submit" value="Sign In" required>Ingress</button>
+
+                        </div>
+                        <div class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <!---------------------------- register --------------------------------------->
+            <div class="box-register" id="register">
+                <div class="top-header">
+                    <h3>Sign Up, Now!</h3>
+                    <small>We are happy to have you with us.</small>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="regUsername" required>
+                        <label for="regUsername">Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="regEmail" required>
+                        <label for="regEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="regPassword" required>
+                        <label for="regPassword">Password</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myRegPassword()">
+                                <i class="fa-regular fa-eye" id="eye-2"></i>
+                                <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="remember">
+                        <input type="checkbox" id="formCheck2" class="check">
+                        <label for="formCheck2">Remember Me</label>
+                    </div>
+                    <div class="input-field">
+                        <a href=""><input type="submit" class="input-submit" value="Ingress" required></a>
+                    </div>
+                </div>
+            </div>
+            <div class="switch">
+                <a href="#" class="login active" onclick="login()">Login</a>
+                <a href="#" class="register" onclick="register()">Register</a>
+                <div class="btn-active" id="btn"></div>
+            </div>
+
         </div>
-      </div>
-      <header>
-        <nav>
-          <ul>
-            <li><img src="Views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/pc/pc.html">PC</a></li>
-            <li><img src="Views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
-                href="Views/ps/ps.html">PlayStation</a></li>
-            <li><img src="Views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/xbox/xbox.html">Xbox</a></li>
-            <li><img src="Views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/nintendo/nintendo.html">Nintendo</a></li>
-          </ul>
-        </nav>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-        </div>
-        <a href="../Carrito/carrito.html">
-          <img src="/Views/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
-      </a>
-      </header>
+
     </div>
-  </div>
-  </nav>
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
 
-  <div class="sidebar">
+        function login() {
+            x.style.left = "27px";
+            y.style.right = "-350px";
+            z.style.left = "0px";
+        }
 
-    <button class="border-t border-gray-700">
-      <div class="jjk"><img src="Views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
-    </button>
+        function register() {
+            x.style.left = "-350px";
+            y.style.right = "25px";
+            z.style.left = "150px";
+        }
+        // View Password codes
+        function myLogPassword() {
+            var a = document.getElementById("logPassword");
+            var b = document.getElementById("eye");
+            var c = document.getElementById("eye-slash");
+            if (a.type === "password") {
+                a.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            } else {
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
 
+        function myRegPassword() {
 
-    <div class="space-y-4 mt-4">
-      <button id="genero-btn" class="border-t border-gray-700">
-        <div class="font-medium">Gender</div>
-      </button>
-      <div id="genero-options" class="hidden">
-        <a href="Views/Filtro/filtro_accion.html"><div><button class="accion" id="accion" name="accion">-Action</button></div></a>
-        <div><button class="accion" id="aventura" name="aventura">-Adventure</button></div>
-        <div><button class="accion" id="estrategia" name="estrategia">-Strategy</button></div>
-      </div>
+            var d = document.getElementById("regPassword");
+            var b = document.getElementById("eye-2");
+            var c = document.getElementById("eye-slash-2");
 
+            if (d.type === "password") {
+                d.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            } else {
+                d.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+    </script>
 
-      <hr>
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Price</div>
-      </button>
-      <hr>
-      <button class="border-t border-gray-700">
-        <a href="Views/Ofertas/ofertas.html">Offers</a>
-    </div>
-    </button>
-  </div>
-  </div>
-
-
-  </nav>
-  <!-- Hero Section -->
-  <section id="hero-section" class="hero-section text-center p-20 bg-blue-600 bg-opacity-25">
-    <h1 class="text-5xl font-bold mb-6">The Adventure of The Game Begins Here!</h1>
-    <p class="mb-6">Navigate to new gaming universes. At Gaming Galaxia, every moment is an adventure. Dive into the
-      endless world of video games now.</p>
-  </section>
-  
-  <section class="si">
-    <p class="text-2xl mb-6">Trending</p>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <a href="Views/helldivers/helldivers.html">
-            <img src="Views/img/Helldivers2.png" alt="Imagen 1">
-        </div>
-        <div class="carousel-item">
-          <a href="Views/BaldursGate/baldurgate.html">
-            <img src="Views/img/Baldursgame.png" alt="Imagen 2">
-        </div>
-        <div class="carousel-item">
-          <a href="Views/Lethal Company/lethal.html">
-            <img src="Views/img/lethal2.png" alt="Imagen 3">
-        </div>
-        <div class="carousel-item">
-          <a href="Views/Palworld/Palworld.html">
-            <img src="Views/img/palwordjuego1_.png" alt="Imagen 4">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Trending Section -->
-  <section class="sii">
-    <h2 class="text-2xl mb-6">Trending</h2>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <a href="Views/Cyberpunk/ciberp.html">
-            <img src="Views/img/Cyberpunkgame.png" alt="Imagen 1">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="Views/HollowKnight/HK.html">
-            <img src="Views/img/hollowknightgame.png" alt="Imagen 2">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="Views/GTA/GTA.html">
-            <img src="Views/img/GtaChi.png" alt="Imagen 3">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="Views/Civilization/civilization.html">
-            <img src="Views/img/Civilizationgame.png" alt="Imagen 4">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="grid grid-cols-3 gap-4 text-center py-6 bg-black bg-opacity-75">
-    <div>
-      <span class="fas fa-download"></span>
-      <h3 class="text-lg mt-2">Ultra Fast</h3>
-      <p>Instant Download</p>
-    </div>
-    <div>
-      <span class="fas fa-shield-alt"></span>
-      <h3 class="text-lg mt-2">Reliable and Safe</h3>
-      <p>Over 10,000 games</p>
-    </div>
-    <div>
-      <span class="fas fa-thumbs-up"></span>
-      <h3 class="text-lg mt-2">99% User Approval</h3>
-      <p>Our users love what we offer!</p>
-    </div>
-  </footer>
-  <script src="Models/scriptt.js"></script>
 </body>
 
 </html>

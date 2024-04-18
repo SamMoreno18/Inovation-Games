@@ -37,39 +37,32 @@ class Inicio_sesion extends Conexion
         $columna = mysqli_fetch_assoc($consultaSql);
 
         if (mysqli_num_rows($consultaSql) > 0) {
-            if ($logPass == $columna['password']){
+            if ($logPass == $columna['password']) {
                 $this->id = $columna['id'];
                 return 1;
                 /** inicio exitoso **/
-            }
-            else {
+            } else {
                 return 10;
                 /** inicio incorrecto **/
             }
-            }
-        else {
+        } else {
             return 100;
             /** usuario no registrado **/
         }
     }
 
-public function IdUsuario(){
-return $this->id;
-}
+    public function IdUsuario()
+    {
+        return $this->id;
+    }
 }
 
 class Select extends Conexion
 {
     public function SelectuserByUser($id)
     {
-        $resultado = mysqli_query($this->conexion, "SELECT FROM user WHERE id = '$id' " );
+        $resultado = mysqli_query($this->conexion, "SELECT * FROM users WHERE id = '$id' ");
 
-        return mysqli_fetch_assoc($resultado); 
+        return mysqli_fetch_assoc($resultado);
     }
 }
-
-
-
-?>
-
-
