@@ -1,15 +1,16 @@
 <?php
-require 'funciones_php/cerrar sesion.php';
+session_start();
 
-$Select = new Select(); 
-if (isset($_SESSION['id'])) {
-  $user = $Select->SelectuserByUser($_SESSION['id']); 
+if(isset($_SESSION['username'])) {
+
+    $username = $_SESSION['username'];
+
 } else {
-  header('Location: index.php');
+    header("Location: funciones_php/cerrar_sesion.php");
 }
+
+
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -30,32 +31,32 @@ if (isset($_SESSION['id'])) {
 <body class="bg-gray-900 text-white font-'Open Sans'">
   <div class="header-background">
     <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="Views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></button>
+      <button class="text-xl" id="filtros"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></button>
       <div class="navbar">
         <div class="dropdown">
           <button class="dropbtn" onclick="myFunction()">Account
           </button>
           <div class="dropdown-content" id="myDropdown">
-            <a href="login.php">Login</a>
-            <a href="Views/cuenta/cuenta.html">My profile</a>
-            <a href="Views/Wish-list/wish-list.html">My wish list</a>
+            <a href="funciones_php/cerrar_sesion.php">Log-out</a>
+            <a href="views/cuenta/cuenta.html">My profile</a>
+            <a href="views/Wish-list/wish-list.html">My wish list</a>
           </div>
         </div>
       </div>
       <header>
         <nav>
           <ul>
-            <li><img src="Views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/pc/pc.html">PC</a></li>
-            <li><img src="Views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/ps/ps.html">PlayStation</a></li>
-            <li><img src="Views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/xbox/xbox.html">Xbox</a></li>
-            <li><img src="Views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="Views/nintendo/nintendo.html">Nintendo</a></li>
+            <li><img src="views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/pc/pc.html">PC</a></li>
+            <li><img src="views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/ps/ps.html">PlayStation</a></li>
+            <li><img src="views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/xbox/xbox.html">Xbox</a></li>
+            <li><img src="views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/nintendo/nintendo.html">Nintendo</a></li>
           </ul>
         </nav>
         <div class="search-bar">
           <input type="text" placeholder="Search...">
         </div>
         <a href="../Carrito/carrito.html">
-          <img src="/Views/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
+          <img src="views/img/carrito.png" alt="Left Icon" class="nav-icon left-icon">
         </a>
       </header>
     </div>
@@ -65,7 +66,7 @@ if (isset($_SESSION['id'])) {
   <div class="sidebar">
 
     <button class="border-t border-gray-700">
-      <div class="jjk"><img src="Views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
+      <div class="jjk"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
     </button>
 
 
@@ -74,7 +75,7 @@ if (isset($_SESSION['id'])) {
         <div class="font-medium">Gender</div>
       </button>
       <div id="genero-options" class="hidden">
-        <a href="Views/Filtro/filtro_accion.html">
+        <a href="views/Filtro/filtro_accion.html">
           <div><button class="accion" id="accion" name="accion">-Action</button></div>
         </a>
         <div><button class="accion" id="aventura" name="aventura">-Adventure</button></div>
@@ -88,7 +89,7 @@ if (isset($_SESSION['id'])) {
       </button>
       <hr>
       <button class="border-t border-gray-700">
-        <a href="Views/Ofertas/ofertas.html">Offers</a>
+        <a href="views/Ofertas/ofertas.html">Offers</a>
     </div>
     </button>
   </div>
@@ -108,20 +109,20 @@ if (isset($_SESSION['id'])) {
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
-          <a href="Views/helldivers/helldivers.html">
-            <img src="Views/img/Helldivers2.png" alt="Imagen 1">
+          <a href="views/helldivers/helldivers.html">
+            <img src="views/img/Helldivers2.png" alt="Imagen 1">
         </div>
         <div class="carousel-item">
-          <a href="Views/BaldursGate/baldurgate.html">
-            <img src="Views/img/Baldursgame.png" alt="Imagen 2">
+          <a href="views/BaldursGate/baldurgate.html">
+            <img src="views/img/Baldursgame.png" alt="Imagen 2">
         </div>
         <div class="carousel-item">
-          <a href="Views/Lethal Company/lethal.html">
-            <img src="Views/img/lethal2.png" alt="Imagen 3">
+          <a href="views/Lethal Company/lethal.html">
+            <img src="views/img/lethal2.png" alt="Imagen 3">
         </div>
         <div class="carousel-item">
-          <a href="Views/Palworld/Palworld.html">
-            <img src="Views/img/palwordjuego1_.png" alt="Imagen 4">
+          <a href="views/Palworld/Palworld.html">
+            <img src="views/img/palwordjuego1_.png" alt="Imagen 4">
         </div>
       </div>
     </div>
@@ -132,23 +133,23 @@ if (isset($_SESSION['id'])) {
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
-          <a href="Views/Cyberpunk/ciberp.html">
-            <img src="Views/img/Cyberpunkgame.png" alt="Imagen 1">
+          <a href="views/Cyberpunk/ciberp.html">
+            <img src="views/img/Cyberpunkgame.png" alt="Imagen 1">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/HollowKnight/HK.html">
-            <img src="Views/img/hollowknightgame.png" alt="Imagen 2">
+          <a href="views/HollowKnight/HK.html">
+            <img src="views/img/hollowknightgame.png" alt="Imagen 2">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/GTA/GTA.html">
-            <img src="Views/img/GtaChi.png" alt="Imagen 3">
+          <a href="views/GTA/GTA.html">
+            <img src="views/img/GtaChi.png" alt="Imagen 3">
           </a>
         </div>
         <div class="carousel-item">
-          <a href="Views/Civilization/civilization.html">
-            <img src="Views/img/Civilizationgame.png" alt="Imagen 4">
+          <a href="views/Civilization/civilization.html">
+            <img src="views/img/Civilizationgame.png" alt="Imagen 4">
           </a>
         </div>
       </div>
