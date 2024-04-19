@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-if(isset($_SESSION['username'])) {
+if (isset($_SESSION['username'])) {
 
-    $username = $_SESSION['username'];
+  $username = $_SESSION['username'];
 
 } else {
-    header("Location: funciones_php/cerrar_sesion.php");
+  header("Location: funciones_php/cerrar_sesion.php");
 }
-
-
 ?>
 
 
@@ -31,7 +29,8 @@ if(isset($_SESSION['username'])) {
 <body class="bg-gray-900 text-white font-'Open Sans'">
   <div class="header-background">
     <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></button>
+      <button class="text-xl" id="filtros"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon"
+          class="nav-icon left-icon"></button>
       <div class="navbar">
         <div class="dropdown">
           <button class="dropbtn" onclick="myFunction()">Account
@@ -46,10 +45,14 @@ if(isset($_SESSION['username'])) {
       <header>
         <nav>
           <ul>
-            <li><img src="views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/pc/pc.html">PC</a></li>
-            <li><img src="views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/ps/ps.html">PlayStation</a></li>
-            <li><img src="views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/xbox/xbox.html">Xbox</a></li>
-            <li><img src="views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/nintendo/nintendo.html">Nintendo</a></li>
+            <li><img src="views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/pc/pc.html">PC</a>
+            </li>
+            <li><img src="views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
+                href="views/ps/ps.html">PlayStation</a></li>
+            <li><img src="views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a
+                href="views/xbox/xbox.html">Xbox</a></li>
+            <li><img src="views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a
+                href="views/nintendo/nintendo.html">Nintendo</a></li>
           </ul>
         </nav>
         <div class="search-bar">
@@ -66,7 +69,8 @@ if(isset($_SESSION['username'])) {
   <div class="sidebar">
 
     <button class="border-t border-gray-700">
-      <div class="jjk"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
+      <div class="jjk"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon">
+      </div>
     </button>
 
 

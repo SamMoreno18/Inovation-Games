@@ -3,7 +3,7 @@
 $host = 'localhost';  // Puede ser 'localhost' también
 $dbname = 'innovagames';  // El nombre de tu base de datos
 $username = 'root';  // Tu nombre de usuario para MySQL
-$password = 'juanjose04';  // Tu contraseña para MySQL
+$password = '';  // Tu contraseña para MySQL
 
 // Crear conexión utilizando la extensión mysqli
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -17,4 +17,3 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8");
 
 // Opcional: Configurar otras opciones o manejar sesiones/errores a nivel global
-?>
