@@ -171,11 +171,11 @@
         }
 
         $(document).ready(function () {
-            $('#formAgregarUsuario').submit(function (e) {
-                e.preventDefault(); // Evita que el formulario se envíe por defecto
-                agregarUsuario(); // Llama a la función para agregar usuario
-            });
-
+        $('#formAgregarUsuario').submit(function (e) {
+            e.preventDefault(); // Evita que el formulario se envíe por defecto
+            agregarUsuario(); // Llama a la función para agregar usuario
+        });
+    });
 
 
 
