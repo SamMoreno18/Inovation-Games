@@ -6,7 +6,7 @@ class Conexion
     public $host = 'localhost';
     public $usuario = 'root';
     public $pass = '';
-    public $database_name = 'innova-games';
+    public $database_name = 'innovagames';
     public $conexion;
 
     public function __construct()
