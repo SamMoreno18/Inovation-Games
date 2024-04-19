@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+
+  $username = $_SESSION['username'];
+
+} else {
+  header("Location: funciones_php/cerrar_sesion.php");
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -102,8 +118,10 @@
           class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3 w-full">Guardar
           Descripción</button>
       </div>
+      
+      
       <?php
-      include 'db.php'; // Asegúrate de que la ruta es correcta
+      include '../../funciones_php/db.php'; // Asegúrate de que la ruta es correcta
       $userId = 2;
       $sql = "SELECT juegos.nombre, juegos.url_portada FROM juegos JOIN usuarios_juegos ON juegos.id_juego = usuarios_juegos.id_juego WHERE usuarios_juegos.id_usuario = ?";
       $stmt = $conn->prepare($sql);
