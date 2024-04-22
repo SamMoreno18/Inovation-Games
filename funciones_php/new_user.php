@@ -3,7 +3,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     // Conectar a la base de datos
     $servname = "localhost";
     $username = "root";
-    $password = "juanjose04";
+    $password = "admin123";
     $dbname = "innovagames";
 
     $conn = new mysqli($servname, $username, $password, $dbname);

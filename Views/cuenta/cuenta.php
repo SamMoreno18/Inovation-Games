@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db.php'; // Asegúrate de que la ruta es correcta
+include '../../funciones_php/db.php'; // Asegúrate de que la ruta es correcta
 
 if (isset($_SESSION['id'])) {
     $userId = $_SESSION['id'];
