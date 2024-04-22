@@ -101,10 +101,10 @@
     <div class="carousel">
       <div class="carousel-inner">
       <?php
-      include '../games/funciones_php/db.php'; // Asegúrate de que la ruta es correcta
+      include '../games/funciones_php/db.php'; 
 
       // Aquí puedes modificar la consulta si necesitas filtrar por usuario o traer todos los juegos
-      $sql = "SELECT nombre, url_portada FROM juegos";
+      $sql = "SELECT id_juego,nombre, url_portada FROM juegos";
       $stmt = $conn->prepare($sql);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -113,7 +113,7 @@
           while ($row = $result->fetch_assoc()) {
               echo '<div class="carousel-item">';
               // Asegúrate de ajustar la ruta del href según necesites
-              echo '<a href="Views/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '.html">';
+              echo '<a href="views/template/template.php?id=' . $row['id_juego'] . '">';
               echo '<img src="Views/img/' . htmlspecialchars($row['url_portada']) . '" alt="' . htmlspecialchars($row['nombre']) . '">';
               echo '</a></div>';
           }
