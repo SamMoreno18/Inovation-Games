@@ -4,23 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'TuFuente', sans-serif;
-    background-image: url(../img/hola.webp);
-    background-size: cover;
-    background-attachment: fixed;
-    /* Fija la imagen de fondo */
-    position: relative;
-    background-position: center;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-
-
 html,
 body {
     min-height: 100vh;

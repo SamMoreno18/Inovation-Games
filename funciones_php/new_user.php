@@ -3,7 +3,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     // Conectar a la base de datos
     $servname = "localhost";
     $username = "root";
-    $password = "";
+    $password = "juanjose04";
     $dbname = "innovagames";
 
     $conn = new mysqli($servname, $username, $password, $dbname);
@@ -17,10 +17,11 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $u_type;
 
     // consulta dentro de la base de datos para agregar usuario
-    $sql = "INSERT INTO usuarios (username, email, password) 
-    VALUES ('$username', '$email', '$password')";
+    $sql = "INSERT INTO usuarios (username, email, password, u_type) 
+    VALUES ('$username', '$email', '$password', 2)";
 
     // ejecutamos la consulta
     if ($conn->query($sql) === TRUE) {

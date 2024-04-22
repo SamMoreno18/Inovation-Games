@@ -1,15 +1,3 @@
-<?php
-session_start();
-
-if (isset($_SESSION['username'])) {
-
-  $username = $_SESSION['username'];
-
-} else {
-  header("Location: funciones_php/cerrar_sesion.php");
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +25,8 @@ if (isset($_SESSION['username'])) {
           </button>
           <div class="dropdown-content" id="myDropdown">
             <a href="funciones_php/cerrar_sesion.php">Log-out</a>
-            <a href="views/cuenta/cuenta.html">My profile</a>
-            <a href="views/Wish-list/wish-list.html">My wish list</a>
+            <a href="views/cuenta/cuenta.php">My profile</a>
+            <a href="views/Wish-list/wish-list.html">Add a new game</a>
           </div>
         </div>
       </div>
@@ -112,22 +100,29 @@ if (isset($_SESSION['username'])) {
     <p class="text-2xl mb-6">Trending</p>
     <div class="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item">
-          <a href="views/helldivers/helldivers.html">
-            <img src="views/img/Helldivers2.png" alt="Imagen 1">
-        </div>
-        <div class="carousel-item">
-          <a href="views/BaldursGate/baldurgate.html">
-            <img src="views/img/Baldursgame.png" alt="Imagen 2">
-        </div>
-        <div class="carousel-item">
-          <a href="views/Lethal Company/lethal.html">
-            <img src="views/img/lethal2.png" alt="Imagen 3">
-        </div>
-        <div class="carousel-item">
-          <a href="views/Palworld/Palworld.html">
-            <img src="views/img/palwordjuego1_.png" alt="Imagen 4">
-        </div>
+      <?php
+      include '../games/funciones_php/db.php'; // Asegúrate de que la ruta es correcta
+
+      // Aquí puedes modificar la consulta si necesitas filtrar por usuario o traer todos los juegos
+      $sql = "SELECT nombre, url_portada FROM juegos";
+      $stmt = $conn->prepare($sql);
+      $stmt->execute();
+      $result = $stmt->get_result();
+
+      if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              echo '<div class="carousel-item">';
+              // Asegúrate de ajustar la ruta del href según necesites
+              echo '<a href="Views/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '.html">';
+              echo '<img src="Views/img/' . htmlspecialchars($row['url_portada']) . '" alt="' . htmlspecialchars($row['nombre']) . '">';
+              echo '</a></div>';
+          }
+      } else {
+          echo "No hay juegos disponibles en este momento.";
+      }
+      $conn->close();
+      ?>
+
       </div>
     </div>
   </section>
@@ -138,22 +133,22 @@ if (isset($_SESSION['username'])) {
       <div class="carousel-inner">
         <div class="carousel-item">
           <a href="views/Cyberpunk/ciberp.html">
-            <img src="views/img/Cyberpunkgame.png" alt="Imagen 1">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="views/HollowKnight/HK.html">
-            <img src="views/img/hollowknightgame.png" alt="Imagen 2">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="views/GTA/GTA.html">
-            <img src="views/img/GtaChi.png" alt="Imagen 3">
+            <img src="views/img/Cyberbug.png" alt="Imagen 1">
           </a>
         </div>
         <div class="carousel-item">
           <a href="views/Civilization/civilization.html">
-            <img src="views/img/Civilizationgame.png" alt="Imagen 4">
+            <img src="views/img/CivilitationL.png" alt="Imagen 2">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="views/Lethal Company/lethal.html">
+            <img src="views/img/lethalcp.png" alt="Imagen 3">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="views/Red Dead Redemption/rdr.html">
+            <img src="views/img/Rdr2L.png" alt="Imagen 4">
           </a>
         </div>
       </div>

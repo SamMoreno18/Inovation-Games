@@ -17,3 +17,4 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8");
 
 // Opcional: Configurar otras opciones o manejar sesiones/errores a nivel global
+?>

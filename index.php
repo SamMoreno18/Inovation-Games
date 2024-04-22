@@ -24,6 +24,7 @@
             var username = document.getElementById('regUsername').value;
             var email = document.getElementById('regEmail').value;
             var password = document.getElementById('regPassword').value;
+            var u_type = (2).vale;
 
             $.ajax({
                 type: 'POST',
@@ -31,7 +32,8 @@
                 data: {
                     username: username,
                     email: email,
-                    password: password
+                    password: password,
+                    u_type: u_type
                 },
                 success: function (response) {
                     alert('Usuario agregado correctamente');
