@@ -4,7 +4,7 @@ session_start();
 // Detalles de la base de datos
 $servname = "localhost";
 $username = "root";
-$password = "juanjose04";
+$password = "admin123";
 $database = "innovagames";
 
 // Crear una conexion

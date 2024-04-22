@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+
+  $username = $_SESSION['username'];
+
+} else {
+  header("Location: funciones_php/cerrar_sesion.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +112,7 @@
     <div class="carousel">
       <div class="carousel-inner">
       <?php
-      include '../games/funciones_php/db.php'; // Asegúrate de que la ruta es correcta
+      include 'funciones_php/db.php'; // Asegúrate de que la ruta es correcta
 
       // Aquí puedes modificar la consulta si necesitas filtrar por usuario o traer todos los juegos
       $sql = "SELECT nombre, url_portada FROM juegos";
