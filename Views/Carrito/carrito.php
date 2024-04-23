@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['id'])) {
+    // Si el usuario no ha iniciado sesión, redirigirlo al formulario de inicio de sesión
+    header("Location: login.php");
+    exit();
+}
+
+$servername = "localhost";
+$username = "root";
+$password = "admin123";
+$dbname = "innovagames";
+
+// Asegúrate de validar el ID del juego recibido
+$idJuego = isset($_GET['id_juego']) ? intval($_GET['id_juego']) : 0; // Default a 0 o maneja como error si es necesario
+// Crear conexión
+$conexion = new mysqli($servername, $username, $password, $dbname);
+// Asegúrate de manejar cualquier error de conexión aquí
+if ($conexion->connect_error) {
+    die("La conexión ha fallado: " . $conexion->connect_error);
+}
+
+$idUsuario = $_SESSION['id'];
+$idJuego = isset($_GET['id_juego']) ? intval($_GET['id_juego']) : 0; // Recuperar el ID del juego desde GET y validar
+
+// Prepara y ejecuta la consulta a la base de datos para insertar
+$sql_insert = "INSERT INTO usuarios_juegos (id_usuario, id_juego) VALUES (?, ?)";
+$stmt_insert = $conexion->prepare($sql_insert);
+$stmt_insert->bind_param("ii", $idUsuario, $idJuego);
+$stmt_insert->execute();
+$stmt_insert->close();
+
+// Prepara y ejecuta la consulta a la base de datos
+$sql = "SELECT nombre, price, img_logo FROM juegos WHERE id_juego = ?";
+$stmt = $conexion->prepare($sql);
+$stmt->bind_param("i", $idJuego);
+$stmt->execute();
+$stmt->bind_result($nombreJuego, $precioJuego, $imagenLogo);
+$stmt->fetch();
+$stmt->close();
+$conexion->close();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -91,72 +136,61 @@
                     </div>
                 </div>
             </div>
-    
+        
             <!-- Sección Derecha: Resumen del Pedido (ahora 8 columnas) -->
             <div class="col-md-8">
                 <div class="card">
-                            <div class="card-header">
-                                RESUMEN DEL PEDIDO
-                                <button type="button" class="close" data-dismiss="card" aria-label="Close">
-                                    <span aria-hidden="true"></span>
-                                </button>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <img src="Views/img/ima/Nightingale.jpg" class="mr-3" alt="Nightingale" style="width: 60px;">
-                                    <div class="media-body">
-                                        <h5 class="mt-0">Nightingale</h5>
-                                        <p>-10% <s>334,99 MXN</s> 301,49 MXN</p>
-                                    </div>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Precio <span class="float-right">334,99 MXN</span></li>
-                                    <li class="list-group-item">Descuento de la oferta <span class="float-right">-33,50 MXN</span></li>
-                                    <li class="list-group-item">IVA incluido (si es aplicable) <span class="float-right"></span></li>
-                                    <li class="list-group-item"><strong>Total <span class="float-right">301,49 MXN</span></strong></li>
-                                </ul>
-                                <p class="card-text mt-3">
-                                    <small class="text-success">Consigue 15,08 MXN en recompensas de Epic con esta compra.</small>
-                                </p>
-                                <input type="text" class="form-control mb-3" placeholder="Introduce un nombre de creador">
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Haz clic aquí si estás de acuerdo con compartir tu correo electrónico con Inflextion Studios Inc...</label>
-                                </div>
-                                <button type="button" class="btn btn-link p-0 mb-3" data-toggle="modal" data-target="#termsModal">Ver términos y condiciones</button>
-                                <!-- Modal para términos y condiciones -->
-                                <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Aquí van los términos y condiciones detallados...
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary btn-block">REALIZAR PEDIDO</button>
+                    <div class="card-header">
+                        RESUMEN DEL PEDIDO
+                        <!-- ... -->
+                    </div>
+                    <div class="card-body">
+                        <div class="media">
+                            <!-- Usamos la variable PHP para mostrar la imagen del logo -->
+                            <img src="ruta/a/tu/directorio/de/imagenes/<?php echo htmlspecialchars($imagenLogo); ?>" class="mr-3" alt="Imagen del juego" style="width: 60px;">
+                            <div class="media-body">
+                                <!-- Mostramos el nombre y precio del juego -->
+                                <h5 class="mt-0"><?php echo htmlspecialchars($nombreJuego); ?></h5>
+                                <p><?php echo htmlspecialchars($precioJuego); ?> MXN</p>
                             </div>
                         </div>
+                        <!-- ... resto de tu código ... -->
+                        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Aquí van los términos y condiciones detallados...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" onclick="realizarPedido()">REALIZAR PEDIDO</button>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
     </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.7.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="ruta/a/card.js"></script>
+<script src="ruta/a/card.js"></script>  
 <script src="/Models/scriptcar.js"></script>
+<script>
+function realizarPedido() {
+    // Aquí puedes colocar la URL a la que deseas redireccionar después de realizar el pedido
+    window.location.href = "pagina_de_compra_lograda.html";
+}
+</script>
 </body>
 </html>

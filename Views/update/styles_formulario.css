@@ -1,0 +1,103 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('Untitled.svg') no-repeat center center fixed, #1D2951; /* La URL de la imagen y luego el color de fondo */
+    background-size: cover;
+    /* ... el resto de tus estilos ... */
+  }
+  
+  @keyframes floatBackground {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: 50px 50px; /* Mueve la imagen hacia la derecha e inferior */
+    }
+    100% {
+        background-position: center; /* Vuelve a la posición original */
+    }
+}
+
+body, html {
+    /* ... tus estilos ... */
+    background: url('Untitled.svg') no-repeat center center fixed, #30394B;
+    background-size: cover;
+    animation: floatBackground 10s ease-in-out infinite; /* Aplica la animación */
+}
+
+  .form-container {
+    max-width: 600px; /* Un poco más estrecho para un aspecto más elegante */
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #2A2E37; /* Color oscuro para el fondo del formulario */
+    color: #fff;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más suave y dispersa */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Más espacio entre campos */
+  }
+  
+  label {
+    font-weight: 500; /* Fuente más gruesa para las etiquetas */
+    color: #E2E2E2; /* Color de texto más claro para las etiquetas */
+    margin-bottom: 10px; /* Menos espacio entre la etiqueta y el campo de entrada */
+  }
+  
+  input[type="text"], input[type="file"], input[type="number"], input[type="date"] {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px; /* Bordes aún más redondeados para los campos de entrada */
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50; /* Un color más vibrante para el botón */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 15px; /* Bordes redondeados */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #43A047; /* Color ligeramente más oscuro al pasar el ratón */
+  }
+  
+  /* Añadir efecto hover a los inputs para un feedback interactivo */
+  input[type="text"]:hover, input[type="file"]:hover, input[type="number"]:hover, input[type="date"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Media query para mantener el diseño responsivo */
+  @media (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      padding: 30px;
+    }
+  }
+  
+  .form-title {
+    text-align: center;
+    color: #ffffff; /* Cambiar si es necesario para que coincida con tu diseño */
+    margin-bottom: 2rem; /* Espacio antes del formulario */
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que esta fuente se carga como en tu @import */
+    font-size: 2.5rem; /* Tamaño de la fuente, ajustar según sea necesario */
+    font-weight: 600; /* Peso de la fuente, ajustar si es necesario */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Opcional: añade una sombra para mejorar la legibilidad */
+}
+
+/* Asegúrate de que el contenedor del formulario tiene el padding-top adecuado para no cortar el título */
+.form-container {
+    padding-top: 40px; /* Ajusta según el tamaño de tu título */
+    /* Resto de tus estilos... */
+}
+
+  

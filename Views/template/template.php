@@ -90,9 +90,9 @@ $conn = null;
           <img src="../img/<?php echo htmlspecialchars($juego['img_logo']); ?>" alt="Logo Icon" class="logo-icon">
             <!-- Aquí otros datos como el precio, desarrollador, etc. -->
             <div class="purchase-options">
-              <div class="compra">
-                <button>COMPRALO YA</button>
-              </div>
+            <div class="compra">
+            <a href="../Carrito/carrito.php?id_juego=<?php echo htmlspecialchars($id_juego); ?>">Comprar juego</a>
+                </div>
               <button>AGREGAR AL CARRITO</button>
               <button>A LISTA DE DESEOS</button>
             </div>

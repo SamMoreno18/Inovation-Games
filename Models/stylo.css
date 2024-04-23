@@ -6,12 +6,17 @@
 
 
 #hero-section.fade-in {
-  animation: fadeInAnimation 1s ease-in-out forwards;
+    animation: fadeInAnimation 1s ease-in-out forwards;
 }
 
 @keyframes fadeInAnimation {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .hidden {
@@ -235,6 +240,39 @@ header nav ul li a {
     }
 }
 
+
+/* Elementos de la sidebar */
+/* Estilos CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#search-results {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+input[type="text"]#search-input {
+    color: black; /* Cambia el color del texto a negro */
+}
+.hola {
+    color: black; /* Cambia el color del texto a negro */
+}
+
+
+
+
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -243,9 +281,10 @@ header nav ul li a {
     width: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    transition: 0.5s;
+    transition: 1s;
     z-index: 1000;
     background-color: #1F2544;
+    text-align: center;
 
 }
 
@@ -289,5 +328,5 @@ header nav ul li a {
     border-color: #ffffff;
     margin: 0 10px;
 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }

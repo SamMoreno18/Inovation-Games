@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Submission Form</title>
+        <link rel="stylesheet" type="text/css" href="styles_formulario.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        </head>
+        
+<body>
+    <div class="form-container"> <!-- Esta línea es necesaria para que los estilos se apliquen -->
+        <h1 class="form-title">Submit Games</h1>
+        <form action="../../funciones_php/submit_juegos.php" method="post" enctype="multipart/form-data">
+        <!-- Campos de texto existentes -->
+        <!-- ... -->
+        <div class="form-group">
+            <label for="nombre">Game Name</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+        <!-- Campo para cargar la imagen de portada -->
+        <div class="form-group">
+          <label for="url_portada">Cover Image URL</label>
+          <input type="file" id="url_portada" name="url_portada" required>
+        </div>
+      
+        <!-- Campo para cargar el logo del juego -->
+        <div class="form-group">
+          <label for="img_logo">Game Logo</label>
+          <input type="file" id="img_logo" name="img_logo" required>
+        </div>
+      
+        <!-- Campo para cargar el trailer -->
+        <div class="form-group">
+          <label for="url_trailer">Game Trailer URL</label>
+          <input type="text" id="url_trailer" name="url_trailer">
+        </div>
+      
+        <!-- Campos para cargar imágenes adicionales -->
+        <div class="form-group">
+          <label for="img1">Additional Image 1</label>
+          <input type="file" id="img1" name="img1" required>
+        </div>
+        <div class="form-group">
+          <label for="img2">Additional Image 2</label>
+          <input type="file" id="img2" name="img2">
+        </div>
+        <div class="form-group">
+          <label for="img3">Additional Image 3</label>
+          <input type="file" id="img3" name="img3">
+        </div>
+      
+
+        <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" required>
+  </div>
+  <!-- Campo para el precio -->
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" id="price" name="price" required>
+  </div>
+  <!-- Campo para el desarrollador -->
+  <div class="form-group">
+    <label for="developer">Developer</label>
+    <input type="text" id="developer" name="developer" required>
+  </div>
+  <!-- Campo para la fecha de lanzamiento -->
+  <div class="form-group">
+    <label for="release_date">Release Date</label>
+    <input type="date" id="release_date" name="release_date" required>
+  </div>
+  <!-- Botón de envío -->
+  <div class="form-group">
+    <input type="submit" value="Upload Game" class="button upload-btn">
+  </div>
+</form>
+    <script>
+    function previewGame() {
+      // Code for previewing the game
+    }
+
+    function saveDraft() {
+      // Code for saving form data as a draft
+    }
+
+    function resetForm() {
+      document.querySelector('form').reset();
+    }
+    
+    </script>
+
+  </div>
+</div>
+
+</body>
+</html>
+

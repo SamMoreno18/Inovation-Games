@@ -4,7 +4,6 @@ session_start();
 if (isset($_SESSION['username'])) {
 
   $username = $_SESSION['username'];
-
 } else {
   header("Location: funciones_php/cerrar_sesion.php");
 }
@@ -28,16 +27,15 @@ if (isset($_SESSION['username'])) {
 <body class="bg-gray-900 text-white font-'Open Sans'">
   <div class="header-background">
     <div class="flex items-center justify-between">
-      <button class="text-xl" id="filtros"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon"
-          class="nav-icon left-icon"></button>
+      <button class="text-xl" id="filtros"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></button>
       <div class="navbar">
         <div class="dropdown">
           <button class="dropbtn" onclick="myFunction()">Account
           </button>
           <div class="dropdown-content" id="myDropdown">
             <a href="funciones_php/cerrar_sesion.php">Log-out</a>
-            <a href="views/cuenta/cuenta.php">My profile</a>
-            <a href="views/Wish-list/wish-list.html">Add a new game</a>
+            <a href="views/cuenta/cuentaadmin.php">My profile</a>
+            <a href="views/update/subida_juegos.html">Add a new game</a>
           </div>
         </div>
       </div>
@@ -46,12 +44,9 @@ if (isset($_SESSION['username'])) {
           <ul>
             <li><img src="views/img/pc.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/pc/pc.html">PC</a>
             </li>
-            <li><img src="views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a
-                href="views/ps/ps.html">PlayStation</a></li>
-            <li><img src="views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a
-                href="views/xbox/xbox.html">Xbox</a></li>
-            <li><img src="views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a
-                href="views/nintendo/nintendo.html">Nintendo</a></li>
+            <li><img src="views/img/logotipo-de-playstation.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/ps/ps.html">PlayStation</a></li>
+            <li><img src="views/img/xbox.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/xbox/xbox.html">Xbox</a></li>
+            <li><img src="views/img/tecnologia.png" alt="Left Icon" class="nav-icon left-icon"><a href="views/nintendo/nintendo.html">Nintendo</a></li>
           </ul>
         </nav>
         <div class="search-bar">
@@ -66,35 +61,15 @@ if (isset($_SESSION['username'])) {
   </nav>
 
   <div class="sidebar">
-
-    <button class="border-t border-gray-700">
-      <div class="jjk"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon">
-      </div>
-    </button>
-
-
-    <div class="space-y-4 mt-4">
-      <button id="genero-btn" class="border-t border-gray-700">
-        <div class="font-medium">Gender</div>
-      </button>
-      <div id="genero-options" class="hidden">
-        <a href="views/Filtro/filtro_accion.html">
-          <div><button class="accion" id="accion" name="accion">-Action</button></div>
-        </a>
-        <div><button class="accion" id="aventura" name="aventura">-Adventure</button></div>
-        <div><button class="accion" id="estrategia" name="estrategia">-Strategy</button></div>
-      </div>
+        <button class="border-t border-gray-700">
+            <div class="jjk"><img src="views/img/filtrar-removebg-preview.png" alt="left-icon" class="nav-icon left-icon"></div>
+        </button>
+        <h1>Find your game</h1>
+        <input type="text" class="hola" id="search-input" placeholder="Buscar...">
+        <div id="search-results"></div>
 
 
-      <hr>
-      <button class="border-t border-gray-700">
-        <div class="font-medium">Price</div>
-      </button>
-      <hr>
-      <button class="border-t border-gray-700">
-        <a href="views/Ofertas/ofertas.html">Offers</a>
-    </div>
-    </button>
+
   </div>
   </div>
 
@@ -112,27 +87,28 @@ if (isset($_SESSION['username'])) {
     <div class="carousel">
       <div class="carousel-inner">
       <?php
-      include 'funciones_php/db.php'; // Asegúrate de que la ruta es correcta
-
-      // Aquí puedes modificar la consulta si necesitas filtrar por usuario o traer todos los juegos
-      $sql = "SELECT nombre, url_portada FROM juegos";
-      $stmt = $conn->prepare($sql);
-      $stmt->execute();
-      $result = $stmt->get_result();
-
-      if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-              echo '<div class="carousel-item">';
-              // Asegúrate de ajustar la ruta del href según necesites
-              echo '<a href="Views/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '/' . htmlspecialchars(strtolower(str_replace(' ', '', $row['nombre']))) . '.html">';
-              echo '<img src="Views/img/' . htmlspecialchars($row['url_portada']) . '" alt="' . htmlspecialchars($row['nombre']) . '">';
-              echo '</a></div>';
+          include 'funciones_php/db.php'; 
+        
+          // Aquí puedes modificar la consulta si necesitas filtrar por usuario o traer todos los juegos
+          $sql = "SELECT id_juego,nombre, url_portada FROM juegos";
+          $stmt = $conn->prepare($sql);
+          $stmt->execute();
+          $result = $stmt->get_result();
+        
+          if ($result->num_rows > 0) {
+              while ($row = $result->fetch_assoc()) {
+                  echo '<div class="carousel-item">';
+        
+                  
+                  echo '<a href="views/template/template.php?id=' . $row['id_juego'] . '">';
+                  echo '<img src="Views/img/' . htmlspecialchars($row['url_portada']) . '" alt="' . htmlspecialchars($row['nombre']) . '">';
+                  echo '</a></div>';
+              }
+          } else {
+              echo "No hay juegos disponibles en este momento.";
           }
-      } else {
-          echo "No hay juegos disponibles en este momento.";
-      }
-      $conn->close();
-      ?>
+          $conn->close();
+          ?>
 
       </div>
     </div>
@@ -182,7 +158,35 @@ if (isset($_SESSION['username'])) {
       <p>Our users love what we offer!</p>
     </div>
   </footer>
+
+
+
+  <!-- scripts de javascript -->
+
   <script src="Models/scriptt.js"></script>
+  <script>
+    // Código JavaScript
+
+    document.getElementById('search-input').addEventListener('input', function() {
+      var searchTerm = this.value;
+      if (searchTerm.length < 3) {
+        document.getElementById('search-results').innerHTML = '';
+        return;
+      }
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'funciones_php/search.php', true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById('search-results').innerHTML = xhr.responseText;
+        } else {
+          console.log('Error: ' + xhr.statusText);
+        }
+      };
+      xhr.send('search=' + encodeURIComponent(searchTerm));
+    });
+  </script>
+
 </body>
 
 </html>
