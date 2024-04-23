@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'innovagames';
 $username = 'root';
-$password = 'juanjose04';
+$password = 'admin123';
 
 try {
   $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
